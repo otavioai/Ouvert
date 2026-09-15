@@ -1,24 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useId, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { headerCta, navItems, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
@@ -27,6 +30,7 @@ export function SiteHeader() {
           href="/"
           className="shrink-0 text-foreground no-underline"
           aria-label={`${site.fullName} — Página inicial`}
+          onClick={() => setOpen(false)}
         >
           <span className="font-heading text-[1.05rem] font-medium tracking-[0.32em] sm:text-lg">
             {site.name}
@@ -61,55 +65,55 @@ export function SiteHeader() {
         <div className="ml-auto flex items-center gap-2 lg:ml-0">
           <Button
             nativeButton={false}
-            render={<Link href={headerCta.href} />}
+            render={<Link href={headerCta.href} onClick={() => setOpen(false)} />}
             className="h-9 px-3 text-[12px] tracking-wide sm:h-10 sm:px-4 sm:text-[13px]"
           >
             {headerCta.label}
           </Button>
 
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger
-              className="inline-flex size-9 items-center justify-center rounded-md text-foreground hover:bg-muted lg:hidden"
-              aria-label="Abrir menu"
-            >
-              <Menu className="size-5" />
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="bg-popover p-0"
-              showCloseButton
-            >
-              <SheetHeader className="border-b border-border px-5 py-5">
-                <SheetTitle className="font-heading text-left text-lg tracking-[0.28em]">
-                  {site.name}
-                </SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-1 px-3 py-4" aria-label="Mobile">
-                {navItems.map((item) => {
-                  const current =
-                    item.href === "/"
-                      ? pathname === "/"
-                      : pathname.startsWith(item.href);
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      aria-current={current ? "page" : undefined}
-                      className={cn(
-                        "rounded-md px-3 py-3 text-base text-muted-foreground hover:bg-muted hover:text-foreground",
-                        current && "bg-muted text-foreground"
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                })}
-              </nav>
-            </SheetContent>
-          </Sheet>
+          <button
+            type="button"
+            className="inline-flex size-9 items-center justify-center rounded-md text-foreground hover:bg-muted lg:hidden"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            aria-controls={menuId}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
         </div>
       </div>
+
+      {open ? (
+        <nav
+          id={menuId}
+          className="border-t border-border bg-background lg:hidden"
+          aria-label="Mobile"
+        >
+          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-3 py-3 sm:px-6">
+            {navItems.map((item) => {
+              const current =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={current ? "page" : undefined}
+                  className={cn(
+                    "rounded-md px-3 py-3 text-base text-muted-foreground hover:bg-muted hover:text-foreground",
+                    current && "bg-muted text-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+        </nav>
+      ) : null}
     </header>
   );
 }
