@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -11,26 +11,20 @@ import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-  const menuId = useId();
+  const menuRef = useRef<HTMLDetailsElement>(null);
 
-  useEffect(() => {
-    if (!open) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open]);
+  const closeMenu = () => {
+    if (menuRef.current) menuRef.current.open = false;
+  };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
+    <header className="relative sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-5 sm:h-[4.25rem] sm:px-8">
         <Link
           href="/"
           className="shrink-0 text-foreground no-underline"
           aria-label={`${site.fullName} — Página inicial`}
-          onClick={() => setOpen(false)}
+          onClick={closeMenu}
         >
           <span className="font-heading text-[1.05rem] font-medium tracking-[0.32em] sm:text-lg">
             {site.name}
@@ -65,55 +59,50 @@ export function SiteHeader() {
         <div className="ml-auto flex items-center gap-2 lg:ml-0">
           <Button
             nativeButton={false}
-            render={<Link href={headerCta.href} onClick={() => setOpen(false)} />}
+            render={<Link href={headerCta.href} onClick={closeMenu} />}
             className="h-9 px-3 text-[12px] tracking-wide sm:h-10 sm:px-4 sm:text-[13px]"
           >
             {headerCta.label}
           </Button>
 
-          <button
-            type="button"
-            className="inline-flex size-9 items-center justify-center rounded-md text-foreground hover:bg-muted lg:hidden"
-            aria-label={open ? "Fechar menu" : "Abrir menu"}
-            aria-expanded={open}
-            aria-controls={menuId}
-            onClick={() => setOpen((value) => !value)}
-          >
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+          <details ref={menuRef} className="group lg:hidden">
+            <summary
+              className="flex size-9 cursor-pointer list-none items-center justify-center rounded-md text-foreground hover:bg-muted [&::-webkit-details-marker]:hidden"
+              aria-label="Abrir menu"
+            >
+              <Menu className="size-5 group-open:hidden" />
+              <X className="hidden size-5 group-open:block" />
+            </summary>
+            <nav
+              className="absolute inset-x-0 top-full z-50 border-b border-border bg-navy-mid shadow-2xl"
+              aria-label="Mobile"
+            >
+              <div className="mx-auto flex max-w-6xl flex-col gap-1 px-3 py-3 sm:px-6">
+                {navItems.map((item) => {
+                  const current =
+                    item.href === "/"
+                      ? pathname === "/"
+                      : pathname.startsWith(item.href);
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMenu}
+                      aria-current={current ? "page" : undefined}
+                      className={cn(
+                        "rounded-md px-3 py-3 text-base text-muted-foreground hover:bg-muted hover:text-foreground",
+                        current && "bg-muted text-foreground"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+            </nav>
+          </details>
         </div>
       </div>
-
-      {open ? (
-        <nav
-          id={menuId}
-          className="border-t border-border bg-background lg:hidden"
-          aria-label="Mobile"
-        >
-          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-3 py-3 sm:px-6">
-            {navItems.map((item) => {
-              const current =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  aria-current={current ? "page" : undefined}
-                  className={cn(
-                    "rounded-md px-3 py-3 text-base text-muted-foreground hover:bg-muted hover:text-foreground",
-                    current && "bg-muted text-foreground"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
-        </nav>
-      ) : null}
     </header>
   );
 }
