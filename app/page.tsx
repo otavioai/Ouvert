@@ -37,19 +37,14 @@ export default function HomePage() {
             >
               Agendar conversa de 45 minutos (sem custo)
             </Button>
-            <div className="flex flex-col gap-1">
-              <Button
-                variant="outline"
-                disabled
-                className="h-12 border-border px-6 text-sm tracking-wide"
-                title="PDF ainda não disponível"
-              >
-                Baixar o caso da vinícola
-              </Button>
-              <p className="text-xs text-muted-foreground">
-                Indisponível até o PDF do caso estar pronto.
-              </p>
-            </div>
+            <Button
+              nativeButton={false}
+              variant="outline"
+              render={<Link href="/casos" />}
+              className="h-12 px-6 text-sm tracking-wide"
+            >
+              Estudos de caso
+            </Button>
           </div>
         </Container>
       </section>

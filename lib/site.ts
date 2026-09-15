@@ -7,8 +7,13 @@ export const site = {
   base: "Bento Gonçalves / Serra Gaúcha",
   placeholders: {
     whatsapp: "[WHATSAPP]",
-    linkedin: "[LINKEDIN]",
     telefone: "[TELEFONE]",
+  },
+  social: {
+    linkedin: "https://www.linkedin.com/in/luisotavioberti",
+    linkedinCompany:
+      "https://www.linkedin.com/company/ouvert-estrategias-corporativas",
+    instagram: "https://www.instagram.com/otavioberti/",
   },
 } as const;
 
@@ -16,7 +21,7 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/a-oferta", label: "A Oferta" },
   { href: "/credencial", label: "Credencial" },
-  { href: "/casos", label: "Casos" },
+  { href: "/casos", label: "Estudos de caso" },
   { href: "/insights", label: "Insights" },
   { href: "/contato", label: "Contato" },
 ] as const;
@@ -85,4 +90,48 @@ export const stats = [
     value: "A&B / Serra",
     label: "histórico real em alimentos e bebidas, com ligação à Serra Gaúcha",
   },
+] as const;
+
+export const insightPosts = [
+  {
+    title: "Os três sinais antes da recuperação judicial",
+    excerpt:
+      "A maioria das empresas não entra em crise de um dia para o outro. Entra em crise porque ninguém quis ler os sinais.",
+    linkedin:
+      "https://www.linkedin.com/posts/luisotavioberti_vamos-falar-sobre-reestrutura%C3%A7%C3%A3o-a-maioria-activity-7472754234942185472-OkYA",
+  },
+  {
+    title: "O teatro das promessas na indústria automotiva",
+    excerpt:
+      "Falei do caso da Lecar. O problema que eu vejo não é técnico — é o que o número aguenta quando um terceiro confere a promessa.",
+    linkedin:
+      "https://www.linkedin.com/posts/ouvert-estrategias-corporativas_o-teatro-das-promessas-na-ind%C3%BAstria-automotiva-activity-7455022763150336001-5fMt",
+  },
+  {
+    title: "Quando o lucro do banco estatal cai 60%",
+    excerpt:
+      "Queda histórica de lucro, inadimplência no agro e ROE pressionado. O que isso muda no exame de crédito de quem pede limite.",
+    linkedin:
+      "https://www.linkedin.com/posts/ouvert-estrategias-corporativas_o-maior-banco-estatal-do-brasil-perdeu-60-activity-7362109188086362113-nVRB",
+  },
+  {
+    title: "Uma oferta quase irresistível",
+    excerpt:
+      "Promessas de futuro brilhante com contrato preso ao passado. Escrevi sobre isso — e continuo no mesmo ponto.",
+    linkedin:
+      "https://www.linkedin.com/posts/ouvert-estrategias-corporativas_o-teatro-das-promessas-na-ind%C3%BAstria-automotiva-activity-7404540166100434944-GbBh",
+  },
+] as const;
+
+export const insightThemes = [
+  "Estoque que não bate com o contábil",
+  "Contrato de família sem documento",
+  "Margem por produto que ninguém consegue explicar",
+  "Provisão trabalhista sem lastro para due diligence",
+  "Ausência de data room",
+  "Receita consolidada que some as linhas ruins com as boas",
+  "Caixa no Excel que não fecha com o banco",
+  "Covenant que o comitê vai perguntar — e a empresa não tem resposta",
+  "Custo por driver inexistente",
+  "Sócio que decide no feeling e o orçamento que não sobrevive a um terceiro",
 ] as const;

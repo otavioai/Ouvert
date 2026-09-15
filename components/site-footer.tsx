@@ -18,23 +18,32 @@ export function SiteFooter() {
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               {site.person} · {site.base}
             </p>
-            <p className="mt-4 text-sm tracking-wide text-slate-blue">
-              17 DD · R$ 1,5 bi · A&amp;B / Serra
-            </p>
           </div>
         </div>
-        <div className="flex flex-col gap-2 text-sm sm:items-end">
-          <p className="text-muted-foreground">
-            LinkedIn:{" "}
-            <span className="font-mono text-brand">{site.placeholders.linkedin}</span>
-          </p>
+        <div className="flex flex-col gap-3 text-sm sm:items-end">
+          <a
+            href={site.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-foreground hover:text-brand"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={site.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-foreground hover:text-brand"
+          >
+            Instagram
+          </a>
           <p className="text-muted-foreground">
             WhatsApp:{" "}
             <span className="font-mono text-brand">{site.placeholders.whatsapp}</span>
           </p>
           <Link
             href="/contato"
-            className="mt-1 text-foreground underline-offset-4 hover:text-brand hover:underline"
+            className="text-foreground underline-offset-4 hover:text-brand hover:underline"
           >
             Contato
           </Link>

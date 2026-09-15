@@ -34,13 +34,30 @@ export default function ContatoPage() {
           </p>
           <p>
             LinkedIn:{" "}
-            <span className="font-mono text-brand">{site.placeholders.linkedin}</span>
+            <a
+              href={site.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand hover:underline"
+            >
+              linkedin.com/in/luisotavioberti
+            </a>
+          </p>
+          <p>
+            Instagram:{" "}
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand hover:underline"
+            >
+              instagram.com/otavioberti
+            </a>
           </p>
           <p className="text-muted-foreground">Base: {site.base}</p>
         </div>
         <p className="mt-6 text-sm text-muted-foreground">
-          Links reais de WhatsApp e LinkedIn ainda não foram fornecidos — os
-          marcadores acima entram no lugar até lá.
+          WhatsApp ainda não foi informado — o marcador entra no lugar até lá.
         </p>
         <Button
           nativeButton={false}

@@ -2,7 +2,7 @@
 
 Site institucional de **Luís Otávio Berti** — OUVERT Estratégias Corporativas. Página inicial em português, mobile-first, para inbound no LinkedIn (médio porte em alimentos e bebidas / vinícolas da Serra Gaúcha).
 
-Nesta versão a **Home** está completa. As demais rotas (A Oferta, Credencial, Casos, Insights, Contato) existem como páginas-placeholder com a navegação funcionando.
+Nesta versão a **Home**, **Insights** e **Estudos de caso** estão no ar. A Oferta, Credencial e Contato seguem como páginas simples, com a navegação funcionando.
 
 ## Rodar localmente
 
@@ -27,13 +27,9 @@ npm run lint
 
 Copy da Home vem dos arquivos de briefing (`eu` em primeira pessoa; preços e entregáveis visíveis).
 
-Ainda **não** há URLs reais de contato. No rodapé e em Contato os campos aparecem assim, de propósito:
+Ainda **não** há WhatsApp comercial. No rodapé e em Contato o campo aparece como `[WHATSAPP]` e `[TELEFONE]`.
 
-- `[WHATSAPP]`
-- `[LINKEDIN]`
-- `[TELEFONE]`
-
-O CTA «Baixar o caso da vinícola» fica desabilitado até o PDF existir.
+LinkedIn: [linkedin.com/in/luisotavioberti](https://www.linkedin.com/in/luisotavioberti). Instagram: [instagram.com/otavioberti](https://www.instagram.com/otavioberti/). Insights aponta para postagens públicas do LinkedIn e para o perfil no Instagram.
 
 ## Stack
 
