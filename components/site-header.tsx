@@ -30,7 +30,7 @@ export function SiteHeader() {
           <BrandLogo
             variant="wordmark"
             priority
-            className="h-8 w-auto max-w-[10.5rem] sm:h-9 sm:max-w-[13rem]"
+            className="h-9 w-auto max-w-[12.5rem] sm:h-11 sm:max-w-[16.5rem]"
           />
         </Link>
 
