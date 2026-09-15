@@ -39,4 +39,4 @@ O CTA «Baixar o caso da vinícola» fica desabilitado até o PDF existir.
 
 Next.js (App Router) · TypeScript · Tailwind CSS · shadcn/ui
 
-Marca: wordmark e selo em `public/brand/` (azul-aço `#3A7A92` e vermelho `#801818` sobre fundo escuro).
+Marca: wordmark e selo em `public/brand/` (azul-aço `#3A7A92` e vermelho `#801818` sobre fundo branco).

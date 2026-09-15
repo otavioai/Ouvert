@@ -77,7 +77,7 @@ export function SiteHeader() {
               <X className="hidden size-5 group-open:block" />
             </summary>
             <nav
-              className="absolute inset-x-0 top-full z-50 border-b border-border bg-navy-mid shadow-2xl"
+              className="absolute inset-x-0 top-full z-50 border-b border-border bg-background shadow-lg"
               aria-label="Mobile"
             >
               <div className="mx-auto flex max-w-6xl flex-col gap-1 px-3 py-3 sm:px-6">

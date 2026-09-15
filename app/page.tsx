@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden border-b border-border">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgb(58_122_146_/_0.16),transparent_55%),radial-gradient(ellipse_40%_40%_at_100%_0%,rgb(128_24_24_/_0.10),transparent_50%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgb(58_122_146_/_0.08),transparent_55%)]"
         />
         <Container className="relative py-16 sm:py-24 lg:py-28">
           <p className="text-[12px] font-medium tracking-[0.22em] text-slate-blue uppercase">
@@ -78,7 +78,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-navy-mid/40 py-12 sm:py-16">
+      <section className="border-y border-border bg-muted py-12 sm:py-16">
         <Container>
           <p className="font-heading mx-auto max-w-3xl text-center text-2xl leading-snug font-normal text-foreground sm:text-[1.85rem]">
             Atendi cerca de cinco empresas de alimentos e bebidas e estou
@@ -115,7 +115,7 @@ export default function HomePage() {
 
       <section
         id="contato"
-        className="border-t border-border bg-[radial-gradient(ellipse_70%_80%_at_50%_120%,rgb(58_122_146_/_0.14),transparent_60%)] py-16 sm:py-24"
+        className="border-t border-border bg-muted/60 py-16 sm:py-24"
       >
         <Container className="max-w-3xl text-center">
           <h2 className="font-heading text-3xl font-normal sm:text-5xl">
