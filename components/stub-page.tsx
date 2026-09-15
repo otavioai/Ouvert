@@ -13,7 +13,7 @@ export function StubPage({
   return (
     <section className="flex flex-1 flex-col justify-center py-20 sm:py-28">
       <Container className="max-w-2xl">
-        <p className="text-[11px] font-medium tracking-[0.22em] text-gold uppercase">
+        <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
           Página em preparação
         </p>
         <h1 className="font-heading mt-4 text-4xl leading-tight font-normal sm:text-5xl">

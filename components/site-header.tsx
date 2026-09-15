@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
+import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { headerCta, navItems, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -26,9 +27,11 @@ export function SiteHeader() {
           aria-label={`${site.fullName} — Página inicial`}
           onClick={closeMenu}
         >
-          <span className="font-heading text-[1.05rem] font-medium tracking-[0.32em] sm:text-lg">
-            {site.name}
-          </span>
+          <BrandLogo
+            variant="wordmark"
+            priority
+            className="h-8 w-auto max-w-[10.5rem] sm:h-9 sm:max-w-[13rem]"
+          />
         </Link>
 
         <nav

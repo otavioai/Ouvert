@@ -13,7 +13,7 @@ export default function ContatoPage() {
   return (
     <section className="flex flex-1 flex-col justify-center py-20 sm:py-28">
       <Container className="max-w-2xl">
-        <p className="text-[11px] font-medium tracking-[0.22em] text-gold uppercase">
+        <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
           Conversa de 45 minutos
         </p>
         <h1 className="font-heading mt-4 text-4xl leading-tight font-normal sm:text-5xl">
@@ -26,15 +26,15 @@ export default function ContatoPage() {
         <div className="mt-10 space-y-3 border border-border bg-card px-5 py-6 text-sm">
           <p>
             Telefone:{" "}
-            <span className="font-mono text-gold">{site.placeholders.telefone}</span>
+            <span className="font-mono text-brand">{site.placeholders.telefone}</span>
           </p>
           <p>
             WhatsApp:{" "}
-            <span className="font-mono text-gold">{site.placeholders.whatsapp}</span>
+            <span className="font-mono text-brand">{site.placeholders.whatsapp}</span>
           </p>
           <p>
             LinkedIn:{" "}
-            <span className="font-mono text-gold">{site.placeholders.linkedin}</span>
+            <span className="font-mono text-brand">{site.placeholders.linkedin}</span>
           </p>
           <p className="text-muted-foreground">Base: {site.base}</p>
         </div>

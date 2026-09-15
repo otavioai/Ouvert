@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden border-b border-border">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgb(198_164_110_/_0.14),transparent_55%),radial-gradient(ellipse_40%_40%_at_100%_0%,rgb(143_163_184_/_0.08),transparent_50%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgb(58_122_146_/_0.16),transparent_55%),radial-gradient(ellipse_40%_40%_at_100%_0%,rgb(128_24_24_/_0.10),transparent_50%)]"
         />
         <Container className="relative py-16 sm:py-24 lg:py-28">
           <p className="text-[12px] font-medium tracking-[0.22em] text-slate-blue uppercase">
@@ -20,7 +20,7 @@ export default function HomePage() {
           <h1 className="font-heading mt-6 max-w-4xl text-[2.05rem] leading-[1.15] font-normal tracking-tight text-foreground sm:text-5xl lg:text-[3.35rem]">
             Deixo os números da sua empresa em condição de serem examinados por
             um terceiro:{" "}
-            <span className="text-gold">
+            <span className="text-brand">
               banco, comprador, investidor ou auditor.
             </span>
           </h1>
@@ -57,7 +57,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-24" aria-labelledby="portas-heading">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-[11px] font-medium tracking-[0.22em] text-gold uppercase">
+            <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
               Três portas
             </p>
             <h2
@@ -94,14 +94,14 @@ export default function HomePage() {
         <Container>
           <h2
             id="numeros-heading"
-            className="text-[11px] font-medium tracking-[0.22em] text-gold uppercase"
+            className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase"
           >
             Números em evidência
           </h2>
           <div className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
-              <div key={stat.value} className="border-t border-gold/30 pt-5">
-                <p className="font-heading text-3xl text-gold sm:text-4xl">
+              <div key={stat.value} className="border-t border-brand/30 pt-5">
+                <p className="font-heading text-3xl text-brand sm:text-4xl">
                   {stat.value}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -115,7 +115,7 @@ export default function HomePage() {
 
       <section
         id="contato"
-        className="border-t border-border bg-[radial-gradient(ellipse_70%_80%_at_50%_120%,rgb(198_164_110_/_0.12),transparent_60%)] py-16 sm:py-24"
+        className="border-t border-border bg-[radial-gradient(ellipse_70%_80%_at_50%_120%,rgb(58_122_146_/_0.14),transparent_60%)] py-16 sm:py-24"
       >
         <Container className="max-w-3xl text-center">
           <h2 className="font-heading text-3xl font-normal sm:text-5xl">

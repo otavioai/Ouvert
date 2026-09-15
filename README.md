@@ -1,6 +1,6 @@
-# OUVERT Estratégias
+# OUVERT Estratégias Corporativas
 
-Site institucional de **Luís Otávio Berti** — OUVERT Estratégias. Página inicial em português, mobile-first, para inbound no LinkedIn (médio porte em alimentos e bebidas / vinícolas da Serra Gaúcha).
+Site institucional de **Luís Otávio Berti** — OUVERT Estratégias Corporativas. Página inicial em português, mobile-first, para inbound no LinkedIn (médio porte em alimentos e bebidas / vinícolas da Serra Gaúcha).
 
 Nesta versão a **Home** está completa. As demais rotas (A Oferta, Credencial, Casos, Insights, Contato) existem como páginas-placeholder com a navegação funcionando.
 
@@ -38,3 +38,5 @@ O CTA «Baixar o caso da vinícola» fica desabilitado até o PDF existir.
 ## Stack
 
 Next.js (App Router) · TypeScript · Tailwind CSS · shadcn/ui
+
+Marca: wordmark e selo em `public/brand/` (azul-aço `#3A7A92` e vermelho `#801818` sobre fundo escuro).

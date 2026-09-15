@@ -16,11 +16,11 @@ export function OfferCard({ offer }: { offer: Offer }) {
     <Card
       className={cn(
         "h-full gap-0 py-0 ring-1 ring-border",
-        offer.featured && "ring-gold/45"
+        offer.featured && "ring-brand-red/50"
       )}
     >
       <CardHeader className="gap-3 border-b border-border px-6 py-6">
-        <p className="text-[11px] font-medium tracking-[0.22em] text-gold uppercase">
+        <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
           {offer.eyebrow}
         </p>
         <CardTitle className="font-heading text-[1.7rem] leading-tight font-normal">
@@ -35,13 +35,13 @@ export function OfferCard({ offer }: { offer: Offer }) {
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-4 px-6 py-6">
         <div>
-          <p className="font-heading text-3xl leading-none text-gold sm:text-[2.05rem]">
+          <p className="font-heading text-3xl leading-none text-brand sm:text-[2.05rem]">
             {offer.price}
           </p>
           <p className="mt-2 text-sm tracking-wide text-slate-blue">{offer.term}</p>
         </div>
         {"note" in offer && offer.note ? (
-          <p className="border-l border-gold/50 pl-3 text-sm leading-relaxed text-muted-foreground">
+          <p className="border-l border-brand-red/60 pl-3 text-sm leading-relaxed text-muted-foreground">
             {offer.note}
           </p>
         ) : null}
