@@ -15,7 +15,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
   return (
     <Card
       className={cn(
-        "h-full gap-0 py-0 ring-1 ring-border",
+        "h-full gap-0 py-0 ring-1 ring-border card-lift",
         offer.featured && "ring-brand-red/50"
       )}
     >

@@ -1,65 +1,25 @@
-import Link from "next/link";
-
 import { ClientStrip } from "@/components/client-strip";
 import { Container } from "@/components/container";
+import { CtaBand } from "@/components/cta-band";
+import { AboutBlock } from "@/components/about-block";
 import { Diagnostic } from "@/components/diagnostic";
+import { HomeHero } from "@/components/home-hero";
 import { InsightsTeaser } from "@/components/insights-teaser";
 import { OfferCard } from "@/components/offer-card";
-import { Button } from "@/components/ui/button";
-import { industries, offers, site, stats, whyNow } from "@/lib/site";
+import { offers, whyNow } from "@/lib/site";
 
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-border">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgb(58_122_146_/_0.08),transparent_55%)]"
-        />
-        <Container className="relative py-16 sm:py-24 lg:py-28">
-          <p className="text-[12px] font-medium tracking-[0.22em] text-slate-blue uppercase">
-            {site.person} · {site.fullName}
-          </p>
-          <h1 className="font-heading mt-6 max-w-4xl text-[2.05rem] leading-[1.15] font-normal tracking-tight text-foreground sm:text-5xl lg:text-[3.35rem]">
-            Deixo os números da sua empresa em condição de serem examinados por
-            um terceiro:{" "}
-            <span className="text-brand">
-              banco, comprador, investidor ou auditor.
-            </span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Já passei por esse exame dezessete vezes, do outro lado da mesa — e
-            construí do zero finanças, risco e governança em empresas que
-            precisavam sobreviver a quem confere.
-          </p>
-          <ul className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-[13px] tracking-wide text-slate-blue uppercase">
-            {industries.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Button
-              nativeButton={false}
-              render={<Link href="/contato" />}
-              className="h-12 px-6 text-sm tracking-wide"
-            >
-              Agendar conversa de 45 minutos (sem custo)
-            </Button>
-            <Button
-              nativeButton={false}
-              variant="outline"
-              render={<Link href="/casos" />}
-              className="h-12 px-6 text-sm tracking-wide"
-            >
-              Estudos de caso
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <HomeHero />
+      <AboutBlock />
 
-      <section className="border-b border-border py-16 sm:py-20" aria-labelledby="diagnostico-heading">
+      <section
+        className="border-y border-border bg-muted/50 py-16 sm:py-20"
+        aria-labelledby="diagnostico-heading"
+      >
         <Container>
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+          <p className="text-[11px] font-medium tracking-[0.22em] text-brand-red uppercase">
             Dois pontos
           </p>
           <h2
@@ -103,7 +63,7 @@ export default function HomePage() {
 
       <section className="py-16 sm:py-20" aria-labelledby="agora-heading">
         <Container>
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+          <p className="text-[11px] font-medium tracking-[0.22em] text-brand-red uppercase">
             Por que agora
           </p>
           <h2
@@ -114,7 +74,10 @@ export default function HomePage() {
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
             {whyNow.map((item) => (
-              <article key={item.title} className="border-t border-border pt-5">
+              <article
+                key={item.title}
+                className="card-lift border border-border bg-card px-6 py-6"
+              >
                 <h3 className="font-heading text-2xl font-normal">{item.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
                   {item.text}
@@ -125,52 +88,8 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-t border-border py-16 sm:py-20" aria-labelledby="numeros-heading">
-        <Container>
-          <h2
-            id="numeros-heading"
-            className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase"
-          >
-            Números em evidência
-          </h2>
-          <div className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.value} className="border-t border-brand/30 pt-5">
-                <p className="font-heading text-3xl text-brand sm:text-4xl">
-                  {stat.value}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       <InsightsTeaser />
-
-      <section
-        id="contato"
-        className="border-t border-border bg-muted/60 py-16 sm:py-24"
-      >
-        <Container className="max-w-3xl text-center">
-          <h2 className="font-heading text-3xl font-normal sm:text-5xl">
-            Conversa de 45 minutos, sem custo.
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Me diga se o assunto é comprador, orçamento de 2027 ou banco. Eu já
-            sei qual porta abrir.
-          </p>
-          <Button
-            nativeButton={false}
-            render={<Link href="/contato" />}
-            className="mt-10 h-12 px-7 text-sm tracking-wide"
-          >
-            Agendar conversa
-          </Button>
-        </Container>
-      </section>
+      <CtaBand />
     </>
   );
 }

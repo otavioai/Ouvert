@@ -29,8 +29,36 @@ export const navItems = [
 
 export const headerCta = {
   href: "/contato",
-  label: "Conversa de 45 min",
+  label: "Agendar conversa",
 } as const;
+
+export const photos = {
+  hero: "/photos/hero-meeting.jpg",
+  vineyard: "/photos/vineyard.jpg",
+  wine: "/photos/wine-glass.jpg",
+  ledger: "/photos/ledger.jpg",
+  portrait: "/portraits/otavio-seated.jpg",
+  portraitClose: "/portraits/otavio-close.jpg",
+} as const;
+
+export const heroFeatures = [
+  {
+    title: "Due diligence",
+    text: "17 exames consecutivos, do lado de quem confere.",
+  },
+  {
+    title: "Controles",
+    text: "R$ 1,5 bi de exposição trabalhista estruturada (Safra).",
+  },
+  {
+    title: "Governança",
+    text: "Finanças e risco construídos do zero em cinco unidades.",
+  },
+  {
+    title: "A&B / Serra",
+    text: "Histórico real em alimentos, bebidas e vinícolas.",
+  },
+] as const;
 
 export const offers = [
   {

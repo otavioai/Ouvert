@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { Container } from "@/components/container";
-import { Button } from "@/components/ui/button";
+import { CtaBand } from "@/components/cta-band";
+import { PageBanner } from "@/components/page-banner";
 import {
   Card,
   CardContent,
@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { clients } from "@/lib/site";
+import { clients, photos } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Estudos de caso",
@@ -31,21 +31,15 @@ const reservedCases = [
 export default function CasosPage() {
   return (
     <>
-      <section className="border-b border-border py-16 sm:py-24">
-        <Container className="max-w-3xl">
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
-            Estudos de caso
-          </p>
-          <h1 className="font-heading mt-4 text-4xl leading-tight font-normal sm:text-5xl">
-            O que reprovava. O que foi feito. O que ficou examinável.
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Casos em alimentos e bebidas — com ênfase em vinícolas da Serra
-            Gaúcha. Cada um segue a mesma estrutura: situação → o que reprovava
-            → o que foi feito → resultado.
-          </p>
-        </Container>
-      </section>
+      <PageBanner
+        eyebrow="Estudos de caso"
+        title="O que reprovava. O que foi feito. O que ficou examinável."
+        image={photos.vineyard}
+      >
+        Casos em alimentos e bebidas — com ênfase em vinícolas da Serra Gaúcha.
+        Cada um segue a mesma estrutura: situação → o que reprovava → o que foi
+        feito → resultado.
+      </PageBanner>
 
       <section className="py-16 sm:py-20">
         <Container>
@@ -106,37 +100,7 @@ export default function CasosPage() {
         </Container>
       </section>
 
-      <section className="border-t border-border bg-muted py-16 sm:py-20">
-        <Container className="max-w-3xl">
-          <p className="text-lg leading-relaxed">
-            Se o seu caso parece com o âncora — comprador à vista, números ainda
-            não examináveis —, a porta é a{" "}
-            <strong className="font-medium">Sala de exame</strong> (R$ 35.000 a
-            60.000 · 4 a 8 semanas).
-          </p>
-          <p className="mt-4 text-muted-foreground">
-            Me diga se o assunto é comprador, orçamento de 2027 ou banco. Eu já
-            sei qual porta abrir.
-          </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button
-              nativeButton={false}
-              render={<Link href="/contato" />}
-              className="h-11 px-5 text-sm"
-            >
-              Agendar conversa
-            </Button>
-            <Button
-              nativeButton={false}
-              variant="outline"
-              render={<Link href="/" />}
-              className="h-11 px-5 text-sm"
-            >
-              Voltar para Home
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <CtaBand />
     </>
   );
 }

@@ -37,7 +37,7 @@ export function InsightsTeaser() {
               href={post.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-background px-6 py-8 transition-colors hover:bg-muted/60"
+              className="bg-background px-6 py-8 transition-colors hover:bg-muted/60 card-lift"
             >
               <p className="font-heading text-2xl leading-snug font-normal">
                 {post.title}

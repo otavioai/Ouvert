@@ -6,16 +6,19 @@ import { site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-background">
-      <Container className="flex flex-col gap-8 py-10 sm:flex-row sm:items-end sm:justify-between sm:py-12">
+    <footer className="bg-ink text-white">
+      <Container className="flex flex-col gap-10 py-12 sm:flex-row sm:items-end sm:justify-between sm:py-16">
         <div className="flex items-start gap-4">
-          <BrandLogo variant="seal" className="hidden size-16 shrink-0 sm:block" />
+          <BrandLogo
+            variant="seal-white"
+            className="hidden size-16 shrink-0 sm:block"
+          />
           <div>
             <BrandLogo
-              variant="wordmark"
+              variant="wordmark-white"
               className="h-10 w-auto max-w-[14rem]"
             />
-            <p className="mt-3 max-w-sm text-sm text-muted-foreground">
+            <p className="mt-3 max-w-sm text-sm text-white/65">
               {site.person} · {site.base}
             </p>
           </div>
@@ -25,7 +28,7 @@ export function SiteFooter() {
             href={site.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-foreground hover:text-brand"
+            className="text-white/80 hover:text-white"
           >
             LinkedIn
           </a>
@@ -33,22 +36,26 @@ export function SiteFooter() {
             href={site.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-foreground hover:text-brand"
+            className="text-white/80 hover:text-white"
           >
             Instagram
           </a>
-          <p className="text-muted-foreground">
+          <p className="text-white/55">
             WhatsApp:{" "}
-            <span className="font-mono text-brand">{site.placeholders.whatsapp}</span>
+            <span className="font-mono text-white/80">
+              {site.placeholders.whatsapp}
+            </span>
           </p>
-          <Link
-            href="/contato"
-            className="text-foreground underline-offset-4 hover:text-brand hover:underline"
-          >
+          <Link href="/contato" className="text-white hover:underline">
             Contato
           </Link>
         </div>
       </Container>
+      <div className="border-t border-white/10">
+        <Container className="py-4 text-[11px] tracking-wide text-white/40">
+          Imagens de apoio: Unsplash License. Retrato: {site.person}.
+        </Container>
+      </div>
     </footer>
   );
 }

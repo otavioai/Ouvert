@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { ClientStrip } from "@/components/client-strip";
 import { Container } from "@/components/container";
+import { CtaBand } from "@/components/cta-band";
+import { PageBanner } from "@/components/page-banner";
 import { Button } from "@/components/ui/button";
-import { site } from "@/lib/site";
+import { photos, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Credencial",
@@ -32,24 +35,31 @@ const facts = [
 export default function CredencialPage() {
   return (
     <>
-      <section className="border-b border-border py-16 sm:py-24">
-        <Container className="max-w-3xl">
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
-            Credencial
-          </p>
-          <h1 className="font-heading mt-4 text-4xl leading-tight font-normal sm:text-5xl">
-            Construir o instrumento onde não existia — e depois sobreviver a
-            alguém de fora conferindo. Dezessete vezes.
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Não vendo currículo. Mostro o que já aguentei do outro lado da mesa
-            — e o que deixo pronto do seu lado.
-          </p>
-        </Container>
-      </section>
+      <PageBanner
+        eyebrow="Credencial"
+        title="Construir o instrumento onde não existia — e depois sobreviver a alguém de fora conferindo."
+        image={photos.wine}
+      >
+        Não vendo currículo. Mostro o que já aguentei do outro lado da mesa — e
+        o que deixo pronto do seu lado.
+      </PageBanner>
 
       <section className="py-16 sm:py-20">
         <Container>
+          <div className="mb-12 grid items-center gap-10 md:grid-cols-[220px_1fr]">
+            <Image
+              src={photos.portraitClose}
+              alt={site.person}
+              width={440}
+              height={560}
+              className="w-full object-cover object-top grayscale"
+            />
+            <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              {site.person}. Base em {site.base}. O padrão é o mesmo: construir
+              o instrumento onde não existia e depois sobreviver a alguém de
+              fora conferindo. Dezessete vezes.
+            </p>
+          </div>
           <div className="grid gap-10 md:grid-cols-2">
             {facts.map((fact) => (
               <article key={fact.title} className="border-t border-border pt-5">
@@ -60,10 +70,6 @@ export default function CredencialPage() {
               </article>
             ))}
           </div>
-          <p className="mt-12 max-w-3xl text-lg leading-relaxed">
-            O padrão é o mesmo: construir o instrumento onde não existia e
-            depois sobreviver a alguém de fora conferindo. Dezessete vezes.
-          </p>
         </Container>
       </section>
 
@@ -82,6 +88,7 @@ export default function CredencialPage() {
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button
               nativeButton={false}
+              variant="appointment"
               render={<Link href="/contato" />}
               className="h-11 px-5 text-sm"
             >
@@ -97,13 +104,15 @@ export default function CredencialPage() {
                   rel="noopener noreferrer"
                 />
               }
-              className="h-11 px-5 text-sm"
+              className="h-11 rounded-full px-5 text-sm"
             >
               LinkedIn
             </Button>
           </div>
         </Container>
       </section>
+
+      <CtaBand />
     </>
   );
 }

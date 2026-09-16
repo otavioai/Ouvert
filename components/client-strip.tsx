@@ -32,7 +32,7 @@ export function ClientStrip() {
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-full flex-col border border-border px-6 py-7 transition-colors hover:border-brand/50"
+                className="group card-lift flex h-full flex-col border border-border px-6 py-7 transition-colors hover:border-brand/50"
               >
                 <p className="font-heading text-3xl font-normal tracking-tight">
                   {client.name}
