@@ -135,3 +135,63 @@ export const insightThemes = [
   "Custo por driver inexistente",
   "Sócio que decide no feeling e o orçamento que não sobrevive a um terceiro",
 ] as const;
+
+export const industries = [
+  "Alimentos e bebidas",
+  "Vinícolas",
+  "Serra Gaúcha",
+  "M&A e sucessão",
+  "Crédito e covenant",
+] as const;
+
+export const clients = [
+  {
+    name: "Vallontano",
+    sector: "Vinhos nobres · Vale dos Vinhedos",
+    url: "https://vallontano.com.br/",
+    note: "Vinícola em Bento Gonçalves. Atendi no vertical de alimentos e bebidas.",
+  },
+  {
+    name: "Panamby Capital",
+    sector: "Gestão de recursos",
+    url: "https://www.panambycapital.com.br/",
+    note: "Transformação regulatória: montei o instrumento de controle onde ainda não havia estrutura para quem ia conferir.",
+  },
+] as const;
+
+export const triggers = [
+  {
+    id: "exame",
+    label: "Comprador, sócio, investidor, sucessão ou auditoria",
+    offerId: "sala-de-exame",
+  },
+  {
+    id: "orcamento",
+    label: "Orçamento 2027 ou diagnóstico financeiro",
+    offerId: "orcamento-2027",
+  },
+  {
+    id: "banco",
+    label: "Banco, limite, capital de giro ou covenant",
+    offerId: "dossie-banco",
+  },
+] as const;
+
+export const whyNow = [
+  {
+    title: "Comprador à vista",
+    text: "M&A, sócio ou investidor não espera o estoque fechar no feeling. A sala de exame ou passa, ou o processo trava.",
+  },
+  {
+    title: "Janela de 2027",
+    text: "Quem fecha orçamento entre setembro e novembro precisa de receita por linha, custo por driver e caixa mês a mês — aprovável pelos sócios.",
+  },
+  {
+    title: "Banco na mesa",
+    text: "Renovação de limite, capital de giro ou covenant: o comitê pergunta no formato dele. Eu deixo o dossiê nesse formato.",
+  },
+  {
+    title: "Primeira auditoria",
+    text: "Sucessão ou primeira conferência externa. O padrão é o mesmo: o que reprova, o que fica auditável, o ensaio das perguntas.",
+  },
+] as const;

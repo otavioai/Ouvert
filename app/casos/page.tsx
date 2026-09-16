@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { clients } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Estudos de caso",
@@ -19,10 +21,6 @@ const reservedCases = [
   {
     title: "Grupo de vinícolas preparando M&A",
     note: "Caso âncora — fatos reais ainda em validação. Não publico números nem resultado até isso estar fechado.",
-  },
-  {
-    title: "Alimentos e bebidas · Serra Gaúcha",
-    note: "Slot reservado. Mesma estrutura: situação → o que reprovava → o que foi feito → resultado.",
   },
   {
     title: "Alimentos e bebidas · Serra Gaúcha",
@@ -51,13 +49,47 @@ export default function CasosPage() {
 
       <section className="py-16 sm:py-20">
         <Container>
-          <div className="grid gap-5 md:grid-cols-3">
-            {reservedCases.map((item, index) => (
-              <Card key={`${item.title}-${index}`} className="h-full gap-0 py-0">
-                <CardHeader className="gap-3 px-6 py-6">
-                  <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
-                    {index === 0 ? "Âncora" : `Caso ${index + 1}`}
+          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+            Clientes
+          </p>
+          <h2 className="font-heading mt-3 text-3xl font-normal">Quem eu atendi</h2>
+          <ul className="mt-8 grid gap-5 md:grid-cols-2">
+            {clients.map((client) => (
+              <li key={client.url}>
+                <a
+                  href={client.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-full flex-col border border-border px-6 py-7 hover:border-brand/50"
+                >
+                  <p className="font-heading text-3xl font-normal">{client.name}</p>
+                  <p className="mt-2 text-sm text-slate-blue">{client.sector}</p>
+                  <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+                    {client.note}
                   </p>
+                  <p className="mt-6 inline-flex items-center gap-1 text-sm text-brand">
+                    {client.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                    <ArrowUpRight className="size-3.5" />
+                  </p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      <section className="border-t border-border py-16 sm:py-20">
+        <Container>
+          <h2 className="font-heading text-3xl font-normal">Em preparação</h2>
+          <p className="mt-3 max-w-2xl text-muted-foreground">
+            Os próximos estudos seguem a grade situação → o que reprovava → o
+            que foi feito → resultado. Só publico quando os fatos estiverem
+            validados.
+          </p>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {reservedCases.map((item) => (
+              <Card key={item.title} className="h-full gap-0 py-0">
+                <CardHeader className="gap-3 px-6 py-6">
                   <CardTitle className="font-heading text-xl leading-snug font-normal">
                     {item.title}
                   </CardTitle>

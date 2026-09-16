@@ -1,9 +1,12 @@
 import Link from "next/link";
 
+import { ClientStrip } from "@/components/client-strip";
 import { Container } from "@/components/container";
+import { Diagnostic } from "@/components/diagnostic";
+import { InsightsTeaser } from "@/components/insights-teaser";
 import { OfferCard } from "@/components/offer-card";
 import { Button } from "@/components/ui/button";
-import { offers, site, stats } from "@/lib/site";
+import { industries, offers, site, stats, whyNow } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -29,6 +32,11 @@ export default function HomePage() {
             construí do zero finanças, risco e governança em empresas que
             precisavam sobreviver a quem confere.
           </p>
+          <ul className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-[13px] tracking-wide text-slate-blue uppercase">
+            {industries.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button
               nativeButton={false}
@@ -49,6 +57,24 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <section className="border-b border-border py-16 sm:py-20" aria-labelledby="diagnostico-heading">
+        <Container>
+          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+            Dois pontos
+          </p>
+          <h2
+            id="diagnostico-heading"
+            className="font-heading mt-3 max-w-2xl text-3xl font-normal sm:text-4xl"
+          >
+            Qual o gatilho. Qual a porta.
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            A mensagem de abertura é a mesma. A sua resposta define a porta.
+          </p>
+          <Diagnostic />
+        </Container>
+      </section>
+
       <section className="py-16 sm:py-24" aria-labelledby="portas-heading">
         <Container>
           <div className="max-w-2xl">
@@ -62,7 +88,7 @@ export default function HomePage() {
               A sua resposta define a porta.
             </h2>
             <p className="mt-4 text-muted-foreground">
-              A mensagem de abertura é a mesma. A sua resposta define a porta.
+              Preço, prazo e entregável em evidência — nada sob consulta.
             </p>
           </div>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -73,19 +99,43 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-muted py-12 sm:py-16">
+      <ClientStrip />
+
+      <section className="border-b border-border bg-muted py-12 sm:py-16">
         <Container>
           <p className="font-heading mx-auto max-w-3xl text-center text-2xl leading-snug font-normal text-foreground sm:text-[1.85rem]">
-            Atendi cerca de cinco empresas de alimentos e bebidas e estou
-            preparando um grupo de vinícolas para M&amp;A.
+            Atendi cerca de cinco empresas de alimentos e bebidas — entre elas a
+            Vallontano, no Vale dos Vinhedos — e estou preparando um grupo de
+            vinícolas para M&amp;A.
           </p>
         </Container>
       </section>
 
-      <section
-        className="py-16 sm:py-20"
-        aria-labelledby="numeros-heading"
-      >
+      <section className="py-16 sm:py-20" aria-labelledby="agora-heading">
+        <Container>
+          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+            Por que agora
+          </p>
+          <h2
+            id="agora-heading"
+            className="font-heading mt-3 max-w-2xl text-3xl font-normal sm:text-4xl"
+          >
+            O exame não espera o número fechar no feeling.
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+            {whyNow.map((item) => (
+              <article key={item.title} className="border-t border-border pt-5">
+                <h3 className="font-heading text-2xl font-normal">{item.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+                  {item.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-border py-16 sm:py-20" aria-labelledby="numeros-heading">
         <Container>
           <h2
             id="numeros-heading"
@@ -107,6 +157,8 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      <InsightsTeaser />
 
       <section
         id="contato"

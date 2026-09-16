@@ -2,7 +2,7 @@
 
 Site institucional de **Luís Otávio Berti** — OUVERT Estratégias Corporativas. Página inicial em português, mobile-first, para inbound no LinkedIn (médio porte em alimentos e bebidas / vinícolas da Serra Gaúcha).
 
-Nesta versão a **Home**, **Insights** e **Estudos de caso** estão no ar. A Oferta, Credencial e Contato seguem como páginas simples, com a navegação funcionando.
+Nesta versão a Home segue o recorte editorial de consultoria (diagnóstico em duas perguntas, clientes nomeados, insights). A Oferta, Credencial, Estudos de caso, Insights e Contato estão no ar.
 
 ## Rodar localmente
 
