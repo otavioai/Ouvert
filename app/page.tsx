@@ -101,16 +101,6 @@ export default function HomePage() {
 
       <ClientStrip />
 
-      <section className="border-b border-border bg-muted py-12 sm:py-16">
-        <Container>
-          <p className="font-heading mx-auto max-w-3xl text-center text-2xl leading-snug font-normal text-foreground sm:text-[1.85rem]">
-            Atendi cerca de cinco empresas de alimentos e bebidas — entre elas a
-            Vallontano, no Vale dos Vinhedos — e estou preparando um grupo de
-            vinícolas para M&amp;A.
-          </p>
-        </Container>
-      </section>
-
       <section className="py-16 sm:py-20" aria-labelledby="agora-heading">
         <Container>
           <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
