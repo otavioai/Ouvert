@@ -24,6 +24,11 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.GITHUB_PAGES === "true"
+      ? "https://otavioai.github.io/Ouvert/"
+      : "http://127.0.0.1:4317/"
+  ),
   title: {
     default: `${site.fullName} — ${site.person}`,
     template: `%s · ${site.name}`,

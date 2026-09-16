@@ -18,10 +18,22 @@ Abra [http://localhost:4317](http://localhost:4317).
 Outros comandos:
 
 ```bash
-npm run build    # produção
-npm run start    # servir o build (use a mesma porta do next start, ou --port)
+npm run build    # export estático em out/
+npm run start    # servir out/ na porta 4317
 npm run lint
 ```
+
+## GitHub Pages
+
+O site é estático (`output: "export"`). No repositório [otavioai/Ouvert](https://github.com/otavioai/Ouvert):
+
+1. **Settings → Pages → Build and deployment → Source:** GitHub Actions.
+2. Faça push da `main`. O workflow `.github/workflows/pages.yml` publica em `out/`.
+3. URL do projeto: [https://otavioai.github.io/Ouvert/](https://otavioai.github.io/Ouvert/).
+
+O build no Actions usa `basePath` `/Ouvert` (necessário nesse endereço). Se apontar um **domínio próprio** em Pages, deixe `NEXT_PUBLIC_BASE_PATH` vazio no workflow — senão os assets pedem `/Ouvert/...` e quebram.
+
+`public/.nojekyll` evita que o Jekyll do Pages ignore a pasta `_next`.
 
 ## Conteúdo e placeholders
 
