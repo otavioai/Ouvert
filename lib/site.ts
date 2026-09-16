@@ -1,6 +1,7 @@
 export const site = {
   name: "OUVERT",
   fullName: "OUVERT Estratégias Corporativas",
+  url: "https://www.ouvertestrategias.com.br",
   person: "Luís Otávio Berti",
   tagline:
     "Deixo os números da sua empresa em condição de serem examinados por um terceiro: banco, comprador, investidor ou auditor.",

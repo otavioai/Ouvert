@@ -23,15 +23,27 @@ npm run start    # servir out/ na porta 4317
 npm run lint
 ```
 
-## GitHub Pages
+## GitHub Pages + domínio
 
-O site é estático (`output: "export"`). No repositório [otavioai/Ouvert](https://github.com/otavioai/Ouvert):
+Produção: [https://www.ouvertestrategias.com.br/](https://www.ouvertestrategias.com.br/). O site é estático (`output: "export"`), sem `basePath`.
 
-1. **Settings → Pages → Build and deployment → Source:** GitHub Actions.
-2. Faça push da `main`. O workflow `.github/workflows/pages.yml` publica em `out/`.
-3. URL do projeto: [https://otavioai.github.io/Ouvert/](https://otavioai.github.io/Ouvert/).
+No repositório [otavioai/Ouvert](https://github.com/otavioai/Ouvert):
 
-O build no Actions usa `basePath` `/Ouvert` (necessário nesse endereço). Se apontar um **domínio próprio** em Pages, deixe `NEXT_PUBLIC_BASE_PATH` vazio no workflow — senão os assets pedem `/Ouvert/...` e quebram.
+1. **Settings → Pages → Source:** GitHub Actions.
+2. **Custom domain:** `www.ouvertestrategias.com.br` (o arquivo `public/CNAME` já leva isso no deploy).
+3. Depois que o DNS resolver, marque **Enforce HTTPS**.
+
+DNS no registrador do `.com.br`:
+
+| Tipo | Nome | Valor |
+| --- | --- | --- |
+| CNAME | `www` | `otavioai.github.io` |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+
+Os registros A no apex (`ouvertestrategias.com.br`) mandam o domínio nu para o Pages; o CNAME `www` é o canônico.
 
 `public/.nojekyll` evita que o Jekyll do Pages ignore a pasta `_next`.
 
