@@ -48,7 +48,7 @@ export function Diagnostic() {
       <div>
         <div className="flex h-full min-h-[12rem] flex-col justify-center rounded-md border border-border bg-muted/60 px-6 py-8 group-has-[input:checked]/diag:hidden">
           <p className="font-heading text-2xl leading-snug font-normal text-muted-foreground">
-            Responda uma. Eu já sei qual porta abrir.
+            Responda uma. Eu indico a porta.
           </p>
         </div>
         {triggers.map((item) => {

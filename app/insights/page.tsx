@@ -22,11 +22,12 @@ export default function InsightsPage() {
     <>
       <PageBanner
         eyebrow="Insights"
-        title="O que reprova uma empresa quando alguém de fora olha."
+        title="O que fica frágil quando alguém de fora olha."
         image={photos.ledger}
       >
-        Série curta, em primeira pessoa, sobre o que eu vi reprovar — e o que
-        deixa a empresa em condição de exame. Não é opinião genérica de gestão.
+        Série curta, em primeira pessoa, sobre o que vi precisar de ajuste — e
+        o que deixa a empresa em condição de exame. Sem opinião genérica de
+        gestão.
       </PageBanner>
 
       <section className="py-16 sm:py-20" aria-labelledby="posts-heading">

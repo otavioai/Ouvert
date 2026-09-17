@@ -45,7 +45,7 @@ export const photos = {
 export const heroFeatures = [
   {
     title: "Due diligence",
-    text: "17 exames consecutivos, do lado de quem confere.",
+    text: "17 exames consecutivos, ao lado de quem analisa.",
   },
   {
     title: "Controles",
@@ -70,9 +70,9 @@ export const offers = [
       "Para quem vai a M&A, entrada de sócio ou investidor, sucessão ou primeira auditoria.",
     price: "R$ 35.000 a 60.000",
     term: "4 a 8 semanas",
-    deliverableNoun: "Sala de exame arrumada",
+    deliverableNoun: "Sala de exame organizada",
     deliverable:
-      "Sala de exame arrumada — levantamento do que reprova, reconstrução auditável, data room e ensaio das perguntas do comprador.",
+      "Sala de exame organizada — levantamento dos pontos sensíveis, reconstrução auditável, data room e ensaio das perguntas do comprador.",
     featured: true,
   },
   {
@@ -126,14 +126,14 @@ export const insightPosts = [
   {
     title: "Os três sinais antes da recuperação judicial",
     excerpt:
-      "A maioria das empresas não entra em crise de um dia para o outro. Entra em crise porque ninguém quis ler os sinais.",
+      "A maioria das empresas não entra em crise de um dia para o outro. Os sinais costumam aparecer antes — e dá para lê-los a tempo.",
     linkedin:
       "https://www.linkedin.com/posts/luisotavioberti_vamos-falar-sobre-reestrutura%C3%A7%C3%A3o-a-maioria-activity-7472754234942185472-OkYA",
   },
   {
     title: "O teatro das promessas na indústria automotiva",
     excerpt:
-      "Falei do caso da Lecar. O problema que eu vejo não é técnico — é o que o número aguenta quando um terceiro confere a promessa.",
+      "Falei do caso da Lecar. O ponto que me interessa não é só o técnico — é o que o número sustenta quando um terceiro confere a promessa.",
     linkedin:
       "https://www.linkedin.com/posts/ouvert-estrategias-corporativas_o-teatro-das-promessas-na-ind%C3%BAstria-automotiva-activity-7455022763150336001-5fMt",
   },
@@ -154,16 +154,16 @@ export const insightPosts = [
 ] as const;
 
 export const insightThemes = [
-  "Estoque que não bate com o contábil",
-  "Contrato de família sem documento",
-  "Margem por produto que ninguém consegue explicar",
+  "Estoque que não fecha com o contábil",
+  "Contrato de família ainda sem documento",
+  "Margem por produto difícil de explicar",
   "Provisão trabalhista sem lastro para due diligence",
   "Ausência de data room",
-  "Receita consolidada que some as linhas ruins com as boas",
+  "Receita consolidada que mistura linhas boas e ruins",
   "Caixa no Excel que não fecha com o banco",
-  "Covenant que o comitê vai perguntar — e a empresa não tem resposta",
+  "Covenant que o comitê vai perguntar — e a resposta ainda não está pronta",
   "Custo por driver inexistente",
-  "Sócio que decide no feeling e o orçamento que não sobrevive a um terceiro",
+  "Sócio que decide na intuição e orçamento que não sustenta um terceiro",
 ] as const;
 
 export const industries = [
@@ -210,7 +210,7 @@ export const triggers = [
 export const whyNow = [
   {
     title: "Comprador à vista",
-    text: "M&A, sócio ou investidor não espera o estoque fechar no feeling. A sala de exame ou passa, ou o processo trava.",
+    text: "M&A, sócio ou investidor pedem detalhe além da aproximação. A sala de exame deixa o processo mais seguro para os dois lados.",
   },
   {
     title: "Janela de 2027",
@@ -222,6 +222,6 @@ export const whyNow = [
   },
   {
     title: "Primeira auditoria",
-    text: "Sucessão ou primeira conferência externa. O padrão é o mesmo: o que reprova, o que fica auditável, o ensaio das perguntas.",
+    text: "Sucessão ou primeira conferência externa. O padrão é o mesmo: o que precisa de ajuste, o que fica auditável, o ensaio das perguntas.",
   },
 ] as const;

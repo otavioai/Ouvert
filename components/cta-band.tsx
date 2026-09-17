@@ -24,8 +24,8 @@ export function CtaBand() {
           Conversa de 45 minutos, sem custo.
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-white/75">
-          Me diga se o assunto é comprador, orçamento de 2027 ou banco. Eu já
-          sei qual porta abrir.
+          Me diga se o assunto é comprador, orçamento de 2027 ou banco. Eu
+          indico a porta.
         </p>
         <Button
           nativeButton={false}

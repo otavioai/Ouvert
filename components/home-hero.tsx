@@ -42,9 +42,9 @@ export function HomeHero() {
           terceiro: banco, comprador, investidor ou auditor.
         </h1>
         <p className="rise rise-delay-2 mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-          Já passei por esse exame dezessete vezes, do outro lado da mesa — e
+          Já participei desse exame dezessete vezes, do outro lado da mesa — e
           construí do zero finanças, risco e governança em empresas que
-          precisavam sobreviver a quem confere.
+          precisavam estar prontas para quem analisa.
         </p>
         <div className="rise rise-delay-3 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const facts = [
   {
     title: "17 due diligences",
-    text: "Consecutivas, aprovadas. Eu estava do lado de quem examina — e sei o que faz uma empresa passar ou reprovar.",
+    text: "Consecutivas, aprovadas. Eu estava do lado de quem analisa — e sei o que deixa uma empresa mais preparada para o exame.",
   },
   {
     title: "Panamby Capital",
@@ -28,7 +28,7 @@ const facts = [
   },
   {
     title: "Safra",
-    text: "Controles sobre R$ 1,5 bilhão de exposição trabalhista: o que o comitê e o auditor precisam ver, organizado para aguentar o exame.",
+    text: "Controles sobre R$ 1,5 bilhão de exposição trabalhista: o que o comitê e o auditor precisam ver, organizado para o exame.",
   },
 ];
 
@@ -37,11 +37,11 @@ export default function CredencialPage() {
     <>
       <PageBanner
         eyebrow="Credencial"
-        title="Construir o instrumento onde não existia — e depois sobreviver a alguém de fora conferindo."
+        title="Construir o instrumento onde não existia — e depois acompanhar quem de fora confere."
         image={photos.wine}
       >
-        Não vendo currículo. Mostro o que já aguentei do outro lado da mesa — e
-        o que deixo pronto do seu lado.
+        Não apresento só currículo. Mostro o que já preparei do outro lado da
+        mesa — e o que deixo pronto do seu lado.
       </PageBanner>
 
       <section className="py-16 sm:py-20">
@@ -56,8 +56,8 @@ export default function CredencialPage() {
             />
             <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
               {site.person}. Base em {site.base}. O padrão é o mesmo: construir
-              o instrumento onde não existia e depois sobreviver a alguém de
-              fora conferindo. Dezessete vezes.
+              o instrumento onde não existia e depois acompanhar quem de fora
+              confere. Dezessete vezes.
             </p>
           </div>
           <div className="grid gap-10 md:grid-cols-2">

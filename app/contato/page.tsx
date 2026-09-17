@@ -16,11 +16,11 @@ export default function ContatoPage() {
     <>
       <PageBanner
         eyebrow="Conversa de 45 minutos"
-        title="Sem custo. Com porta definida."
+        title="Sem custo. Com porta em vista."
         image={photos.hero}
       >
-        Me diga se o assunto é comprador, orçamento de 2027 ou banco. Eu já sei
-        qual porta abrir.
+        Me diga se o assunto é comprador, orçamento de 2027 ou banco. Eu indico
+        a porta.
       </PageBanner>
 
       <section className="py-16 sm:py-20">

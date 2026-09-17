@@ -29,7 +29,7 @@ export default function HomePage() {
             Qual o gatilho. Qual a porta.
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            A mensagem de abertura é a mesma. A sua resposta define a porta.
+            A mensagem de abertura é a mesma. A sua resposta indica a porta.
           </p>
           <Diagnostic />
         </Container>
@@ -45,10 +45,10 @@ export default function HomePage() {
               id="portas-heading"
               className="font-heading mt-3 text-3xl font-normal sm:text-4xl"
             >
-              A sua resposta define a porta.
+              A porta que faz sentido para o seu momento.
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Preço, prazo e entregável em evidência — nada sob consulta.
+              Preço, prazo e entregável em evidência — sem “sob consulta”.
             </p>
           </div>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -70,7 +70,7 @@ export default function HomePage() {
             id="agora-heading"
             className="font-heading mt-3 max-w-2xl text-3xl font-normal sm:text-4xl"
           >
-            O exame não espera o número fechar no feeling.
+            Quando o número precisa fechar com clareza.
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
             {whyNow.map((item) => (

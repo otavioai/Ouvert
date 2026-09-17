@@ -19,7 +19,7 @@ export function InsightsTeaser() {
               id="insights-heading"
               className="font-heading mt-3 text-3xl font-normal sm:text-4xl"
             >
-              O que reprova quando alguém de fora olha.
+              O que fica frágil quando alguém de fora olha.
             </h2>
           </div>
           <Link

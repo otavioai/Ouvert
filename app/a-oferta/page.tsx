@@ -19,9 +19,9 @@ export default function OfertaPage() {
         title="Deixo os números da sua empresa em condição de serem examinados por um terceiro."
         image={photos.ledger}
       >
-        Já passei por esse exame dezessete vezes, do outro lado da mesa. Na
-        conversa com quem vai conferir, eu sou a única pessoa que já sentou do
-        lado de quem está sendo examinado.
+        Já participei desse exame dezessete vezes, do outro lado da mesa. Na
+        conversa com quem vai conferir, eu já sentei do lado de quem está sendo
+        examinado — e isso muda o que priorizo e o que entrego.
       </PageBanner>
 
       <section className="border-b border-border py-16 sm:py-20">

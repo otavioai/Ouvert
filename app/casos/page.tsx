@@ -24,7 +24,7 @@ const reservedCases = [
   },
   {
     title: "Alimentos e bebidas · Serra Gaúcha",
-    note: "Slot reservado. Mesma estrutura: situação → o que reprovava → o que foi feito → resultado.",
+    note: "Slot reservado. Mesma estrutura: situação → o que precisava de ajuste → o que foi feito → resultado.",
   },
 ];
 
@@ -33,12 +33,12 @@ export default function CasosPage() {
     <>
       <PageBanner
         eyebrow="Estudos de caso"
-        title="O que reprovava. O que foi feito. O que ficou examinável."
+        title="O que precisava de ajuste. O que foi feito. O que ficou examinável."
         image={photos.bottles}
       >
         Casos em alimentos e bebidas — com ênfase em vinícolas da Serra Gaúcha.
-        Cada um segue a mesma estrutura: situação → o que reprovava → o que foi
-        feito → resultado.
+        Cada um segue a mesma estrutura: situação → o que precisava de ajuste →
+        o que foi feito → resultado.
       </PageBanner>
 
       <section className="py-16 sm:py-20">
@@ -76,9 +76,9 @@ export default function CasosPage() {
         <Container>
           <h2 className="font-heading text-3xl font-normal">Em preparação</h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Os próximos estudos seguem a grade situação → o que reprovava → o
-            que foi feito → resultado. Só publico quando os fatos estiverem
-            validados.
+            Os próximos estudos seguem a grade situação → o que precisava de
+            ajuste → o que foi feito → resultado. Só publico quando os fatos
+            estiverem validados.
           </p>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {reservedCases.map((item) => (
@@ -92,7 +92,8 @@ export default function CasosPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="px-6 pb-6 text-sm text-muted-foreground">
-                  Situação · O que reprovava · O que foi feito · Resultado
+                  Situação · O que precisava de ajuste · O que foi feito ·
+                  Resultado
                 </CardContent>
               </Card>
             ))}
