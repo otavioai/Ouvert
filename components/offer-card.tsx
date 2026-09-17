@@ -15,19 +15,19 @@ export function OfferCard({ offer }: { offer: Offer }) {
   return (
     <Card
       className={cn(
-        "h-full gap-0 py-0 ring-1 ring-border card-lift",
-        offer.featured && "ring-brand-red/50"
+        "h-full gap-0 rounded-none py-0 shadow-none ring-1 ring-border",
+        offer.featured && "ring-brand-red"
       )}
     >
       <CardHeader className="gap-3 border-b border-border px-6 py-6">
-        <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+        <p className="text-[11px] font-semibold tracking-[0.12em] text-brand-red uppercase">
           {offer.eyebrow}
         </p>
-        <CardTitle className="font-heading text-[1.7rem] leading-tight font-normal">
+        <CardTitle className="font-heading text-[1.55rem] leading-tight font-semibold tracking-tight">
           {offer.title}
         </CardTitle>
         {"subtitle" in offer && offer.subtitle ? (
-          <p className="text-sm text-slate-blue">{offer.subtitle}</p>
+          <p className="text-sm text-muted-foreground">{offer.subtitle}</p>
         ) : null}
         <CardDescription className="text-[15px] leading-relaxed text-muted-foreground">
           {offer.forWho}
@@ -35,18 +35,18 @@ export function OfferCard({ offer }: { offer: Offer }) {
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-4 px-6 py-6">
         <div>
-          <p className="font-heading text-3xl leading-none text-brand sm:text-[2.05rem]">
+          <p className="font-heading text-3xl leading-none font-semibold tracking-tight text-foreground sm:text-[2.05rem]">
             {offer.price}
           </p>
-          <p className="mt-2 text-sm tracking-wide text-slate-blue">{offer.term}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{offer.term}</p>
         </div>
         {"note" in offer && offer.note ? (
-          <p className="border-l border-brand-red/60 pl-3 text-sm leading-relaxed text-muted-foreground">
+          <p className="border-l-2 border-brand-red pl-3 text-sm leading-relaxed text-muted-foreground">
             {offer.note}
           </p>
         ) : null}
       </CardContent>
-      <CardFooter className="items-start border-t border-border bg-transparent px-6 py-5">
+      <CardFooter className="items-start border-t border-border bg-muted/40 px-6 py-5">
         <p className="text-[15px] leading-relaxed">
           <span className="text-muted-foreground">Entregável: </span>
           <span className="text-foreground">{offer.deliverable}</span>

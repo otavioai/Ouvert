@@ -13,7 +13,7 @@ import {
   setGithubToken,
   verifyAdminPassword,
 } from "@/lib/admin-auth";
-import { FONT_OPTIONS } from "@/lib/fonts";
+import { FONT_OPTIONS, SANS_FONT_IDS } from "@/lib/fonts";
 import { publishSiteContent, uploadPublicImage } from "@/lib/github-publish";
 import { content as initialContent, type SiteContent } from "@/lib/site";
 
@@ -162,7 +162,7 @@ export function AdminApp() {
             />
           </label>
           {error ? <p className="text-sm text-brand-red">{error}</p> : null}
-          <Button type="submit" className="h-11 w-full rounded-full">
+          <Button type="submit" className="h-11 w-full rounded-sm">
             Entrar
           </Button>
         </form>
@@ -188,14 +188,14 @@ export function AdminApp() {
         <div className="flex flex-wrap gap-2">
           <Link
             href="/"
-            className="inline-flex h-10 items-center rounded-full border border-border px-4 text-sm"
+            className="inline-flex h-10 items-center rounded-sm border border-border px-4 text-sm"
           >
             Ver site
           </Link>
           <button
             type="button"
             onClick={logout}
-            className="inline-flex h-10 items-center rounded-full border border-border px-4 text-sm"
+            className="inline-flex h-10 items-center rounded-sm border border-border px-4 text-sm"
           >
             Sair
           </button>
@@ -203,7 +203,7 @@ export function AdminApp() {
             type="button"
             disabled={busy}
             onClick={handlePublish}
-            className="inline-flex h-10 items-center rounded-full bg-brand-red px-4 text-sm text-white disabled:opacity-60"
+            className="inline-flex h-10 items-center rounded-sm bg-brand-red px-4 text-sm text-white disabled:opacity-60"
           >
             {busy ? "Publicando…" : "Publicar no GitHub"}
           </button>
@@ -237,7 +237,7 @@ export function AdminApp() {
             key={id}
             type="button"
             onClick={() => setTab(id)}
-            className={`rounded-full px-4 py-2 text-sm ${
+            className={`rounded-sm px-4 py-2 text-sm ${
               tab === id
                 ? "bg-ink text-white"
                 : "border border-border bg-background text-muted-foreground hover:text-foreground"
@@ -395,14 +395,7 @@ export function AdminApp() {
                   })
                 }
               >
-                {FONT_OPTIONS.filter((f) =>
-                  [
-                    "Fraunces",
-                    "Playfair Display",
-                    "Libre Baskerville",
-                    "Source Serif 4",
-                  ].includes(f.id)
-                ).map((f) => (
+                {FONT_OPTIONS.map((f) => (
                   <option key={f.id} value={f.id}>
                     {f.label}
                   </option>
@@ -422,13 +415,7 @@ export function AdminApp() {
                 }
               >
                 {FONT_OPTIONS.filter((f) =>
-                  [
-                    "Geist",
-                    "DM Sans",
-                    "Manrope",
-                    "IBM Plex Sans",
-                    "Source Sans 3",
-                  ].includes(f.id)
+                  (SANS_FONT_IDS as readonly string[]).includes(f.id)
                 ).map((f) => (
                   <option key={f.id} value={f.id}>
                     {f.label}
@@ -437,7 +424,9 @@ export function AdminApp() {
               </select>
             </label>
             <p className="text-sm text-muted-foreground sm:col-span-2">
-              Depois de publicar, o build aplica as fontes no site público.
+              Preferência do site: sem serifa (IBM Plex Sans). Serifas ficam
+              disponíveis só no título. Depois de publicar, o build aplica as
+              fontes no site público.
             </p>
           </div>
         ) : null}

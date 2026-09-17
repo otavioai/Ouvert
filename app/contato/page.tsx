@@ -38,7 +38,7 @@ export default function ContatoPage() {
                 Telefone:{" "}
                 <a
                   href={site.contact.telefoneHref}
-                  className="font-mono text-brand hover:underline"
+                  className="font-mono text-brand-red hover:underline"
                 >
                   {site.contact.telefone}
                 </a>
@@ -49,7 +49,7 @@ export default function ContatoPage() {
                   href={site.contact.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-brand hover:underline"
+                  className="font-mono text-brand-red hover:underline"
                 >
                   {site.contact.whatsapp}
                 </a>
@@ -60,7 +60,7 @@ export default function ContatoPage() {
                   href={site.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand hover:underline"
+                  className="text-brand-red hover:underline"
                 >
                   {site.social.linkedinLabel}
                 </a>
@@ -71,7 +71,7 @@ export default function ContatoPage() {
                   href={site.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand hover:underline"
+                  className="text-brand-red hover:underline"
                 >
                   {site.social.instagramLabel}
                 </a>
@@ -88,7 +88,7 @@ export default function ContatoPage() {
                 />
               }
               variant="appointment"
-              className="mt-8 h-11 rounded-full px-5 text-sm"
+              className="mt-8 h-11 px-5 text-sm"
             >
               Chamar no WhatsApp
             </Button>
@@ -96,7 +96,7 @@ export default function ContatoPage() {
               nativeButton={false}
               render={<Link href="/" />}
               variant="outline"
-              className="mt-3 h-11 rounded-full px-5 text-sm sm:ml-3"
+              className="mt-3 h-11 px-5 text-sm sm:ml-3"
             >
               Voltar para Home
             </Button>

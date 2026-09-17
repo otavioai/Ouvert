@@ -43,10 +43,10 @@ export default function CasosPage() {
 
       <section className="py-16 sm:py-20">
         <Container>
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+          <p className="text-[12px] font-semibold tracking-[0.08em] text-brand-red uppercase">
             Clientes
           </p>
-          <h2 className="font-heading mt-3 text-3xl font-normal">Quem eu atendi</h2>
+          <h2 className="font-heading mt-3 text-3xl font-semibold tracking-tight">Quem eu atendi</h2>
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {clients.map((client) => (
               <li key={client.url}>
@@ -56,7 +56,7 @@ export default function CasosPage() {
                   rel="noopener noreferrer"
                   className="group flex h-full flex-col border border-border px-6 py-7 hover:border-brand/50"
                 >
-                  <p className="font-heading text-3xl font-normal">{client.name}</p>
+                  <p className="font-heading text-3xl font-semibold tracking-tight">{client.name}</p>
                   <p className="mt-2 text-sm text-slate-blue">{client.sector}</p>
                   <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
                     {client.note}
@@ -74,7 +74,7 @@ export default function CasosPage() {
 
       <section className="border-t border-border py-16 sm:py-20">
         <Container>
-          <h2 className="font-heading text-3xl font-normal">Em preparação</h2>
+          <h2 className="font-heading text-3xl font-semibold tracking-tight">Em preparação</h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
             Os próximos estudos seguem a grade situação → o que precisava de
             ajuste → o que foi feito → resultado. Só publico quando os fatos
@@ -84,7 +84,7 @@ export default function CasosPage() {
             {reservedCases.map((item) => (
               <Card key={item.title} className="h-full gap-0 py-0">
                 <CardHeader className="gap-3 px-6 py-6">
-                  <CardTitle className="font-heading text-xl leading-snug font-normal">
+                  <CardTitle className="font-heading text-xl leading-snug font-semibold tracking-tight">
                     {item.title}
                   </CardTitle>
                   <CardDescription className="text-[15px] leading-relaxed">

@@ -34,7 +34,7 @@ export default function InsightsPage() {
         <Container>
           <h2
             id="posts-heading"
-            className="font-heading text-3xl font-normal sm:text-4xl"
+            className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl"
           >
             Postagens recentes
           </h2>
@@ -46,7 +46,7 @@ export default function InsightsPage() {
             {insightPosts.map((post) => (
               <Card key={post.linkedin} className="h-full gap-0 py-0">
                 <CardHeader className="gap-3 px-6 py-6">
-                  <CardTitle className="font-heading text-xl leading-snug font-normal">
+                  <CardTitle className="font-heading text-xl leading-snug font-semibold tracking-tight">
                     {post.title}
                   </CardTitle>
                   <CardDescription className="text-[15px] leading-relaxed">
@@ -81,7 +81,7 @@ export default function InsightsPage() {
 
       <section className="border-t border-border bg-muted py-16 sm:py-20">
         <Container>
-          <h2 className="font-heading text-3xl font-normal">
+          <h2 className="font-heading text-3xl font-semibold tracking-tight">
             O que vem no calendário
           </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">

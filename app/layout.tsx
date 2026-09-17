@@ -8,7 +8,7 @@ import { fonts, site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
-  variable: "--font-sans",
+  variable: "--font-geist",
   subsets: ["latin"],
 });
 
@@ -32,19 +32,22 @@ export const metadata: Metadata = {
 
 const fontsLink = googleFontsHref(fonts.display, fonts.sans);
 const useGeistSans = fonts.sans === "Geist";
+const useGeistDisplay = fonts.display === "Geist";
 
 const htmlStyle = {
-  "--font-display": `"${fonts.display}", Georgia, serif`,
-  ...(useGeistSans
-    ? {}
-    : { "--font-sans": `"${fonts.sans}", system-ui, sans-serif` }),
+  "--font-display": useGeistDisplay
+    ? "var(--font-geist), system-ui, sans-serif"
+    : `"${fonts.display}", system-ui, sans-serif`,
+  "--font-sans": useGeistSans
+    ? "var(--font-geist), system-ui, sans-serif"
+    : `"${fonts.sans}", system-ui, sans-serif`,
 } as CSSProperties;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="pt-BR"
-      className={`${useGeistSans ? geistSans.variable : ""} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       style={htmlStyle}
     >
       <head>

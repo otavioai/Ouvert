@@ -26,7 +26,7 @@ export default function OfertaPage() {
 
       <section className="border-b border-border py-16 sm:py-20">
         <Container>
-          <h2 className="font-heading text-3xl font-normal sm:text-4xl">
+          <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
             Qual o gatilho. Qual a porta.
           </h2>
           <Diagnostic />
@@ -35,10 +35,10 @@ export default function OfertaPage() {
 
       <section className="py-16 sm:py-24">
         <Container>
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+          <p className="text-[12px] font-semibold tracking-[0.08em] text-brand-red uppercase">
             Três portas
           </p>
-          <h2 className="font-heading mt-3 text-3xl font-normal sm:text-4xl">
+          <h2 className="font-heading mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
             A mensagem de abertura é a mesma.
           </h2>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">

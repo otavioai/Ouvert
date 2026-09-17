@@ -15,16 +15,17 @@ export default function HomePage() {
       <AboutBlock />
 
       <section
-        className="border-y border-border bg-muted/50 py-16 sm:py-20"
+        className="border-y border-border bg-muted/40 py-20 sm:py-24"
         aria-labelledby="diagnostico-heading"
       >
         <Container>
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand-red uppercase">
+          <div className="h-0.5 w-10 bg-brand-red" aria-hidden />
+          <p className="mt-5 text-[12px] font-semibold tracking-[0.08em] text-brand-red uppercase">
             {homeCopy.diagnosticEyebrow}
           </p>
           <h2
             id="diagnostico-heading"
-            className="font-heading mt-3 max-w-2xl text-3xl font-normal sm:text-4xl"
+            className="font-heading mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl"
           >
             {homeCopy.diagnosticTitle}
           </h2>
@@ -35,23 +36,22 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-24" aria-labelledby="portas-heading">
+      <section className="py-20 sm:py-28" aria-labelledby="portas-heading">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+            <div className="h-0.5 w-10 bg-brand-red" aria-hidden />
+            <p className="mt-5 text-[12px] font-semibold tracking-[0.08em] text-brand-red uppercase">
               {homeCopy.offersEyebrow}
             </p>
             <h2
               id="portas-heading"
-              className="font-heading mt-3 text-3xl font-normal sm:text-4xl"
+              className="font-heading mt-4 text-3xl font-semibold tracking-tight sm:text-4xl"
             >
               {homeCopy.offersTitle}
             </h2>
-            <p className="mt-4 text-muted-foreground">
-              {homeCopy.offersLead}
-            </p>
+            <p className="mt-4 text-muted-foreground">{homeCopy.offersLead}</p>
           </div>
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {offers.map((offer) => (
               <OfferCard key={offer.id} offer={offer} />
             ))}
@@ -61,24 +61,24 @@ export default function HomePage() {
 
       <ClientStrip />
 
-      <section className="py-16 sm:py-20" aria-labelledby="agora-heading">
+      <section className="py-20 sm:py-24" aria-labelledby="agora-heading">
         <Container>
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand-red uppercase">
+          <div className="h-0.5 w-10 bg-brand-red" aria-hidden />
+          <p className="mt-5 text-[12px] font-semibold tracking-[0.08em] text-brand-red uppercase">
             Por que agora
           </p>
           <h2
             id="agora-heading"
-            className="font-heading mt-3 max-w-2xl text-3xl font-normal sm:text-4xl"
+            className="font-heading mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl"
           >
             {homeCopy.whyNowTitle}
           </h2>
-          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+          <div className="mt-12 grid gap-px bg-border sm:grid-cols-2">
             {whyNow.map((item) => (
-              <article
-                key={item.title}
-                className="card-lift border border-border bg-card px-6 py-6"
-              >
-                <h3 className="font-heading text-2xl font-normal">{item.title}</h3>
+              <article key={item.title} className="bg-background px-6 py-8">
+                <h3 className="font-heading text-xl font-semibold tracking-tight sm:text-2xl">
+                  {item.title}
+                </h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
                   {item.text}
                 </p>

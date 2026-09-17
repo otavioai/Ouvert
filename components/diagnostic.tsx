@@ -28,13 +28,13 @@ export function Diagnostic() {
                 />
                 <span
                   className={cn(
-                    "flex w-full rounded-md border border-border bg-background px-4 py-4 text-left text-[15px] leading-snug text-muted-foreground transition-colors",
-                    "hover:border-brand/40 hover:text-foreground",
-                    "peer-checked:border-brand peer-checked:bg-brand/10 peer-checked:text-foreground",
+                    "flex w-full border border-border bg-background px-4 py-4 text-left text-[15px] leading-snug text-muted-foreground transition-colors",
+                    "hover:border-foreground/30 hover:text-foreground",
+                    "peer-checked:border-brand-red peer-checked:bg-background peer-checked:text-foreground",
                     "peer-focus-visible:ring-3 peer-focus-visible:ring-ring/50"
                   )}
                 >
-                  <span className="mr-3 font-mono text-xs text-brand">
+                  <span className="mr-3 font-mono text-xs text-brand-red">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   {item.label}
@@ -46,8 +46,8 @@ export function Diagnostic() {
       </fieldset>
 
       <div>
-        <div className="flex h-full min-h-[12rem] flex-col justify-center rounded-md border border-border bg-muted/60 px-6 py-8 group-has-[input:checked]/diag:hidden">
-          <p className="font-heading text-2xl leading-snug font-normal text-muted-foreground">
+        <div className="flex h-full min-h-[12rem] flex-col justify-center border border-border bg-background px-6 py-8 group-has-[input:checked]/diag:hidden">
+          <p className="font-heading text-2xl leading-snug font-semibold tracking-tight text-muted-foreground">
             Responda uma. Eu indico a porta.
           </p>
         </div>
@@ -58,25 +58,28 @@ export function Diagnostic() {
             <div
               key={item.id}
               className={cn(
-                "h-full min-h-[12rem] flex-col justify-center rounded-md border border-border bg-muted/60 px-6 py-8",
+                "h-full min-h-[12rem] flex-col justify-center border border-border bg-background px-6 py-8",
                 panelByTrigger[item.id]
               )}
             >
-              <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+              <p className="text-[11px] font-semibold tracking-[0.12em] text-brand-red uppercase">
                 Porta
               </p>
-              <p className="font-heading mt-3 text-3xl font-normal">
+              <p className="font-heading mt-3 text-3xl font-semibold tracking-tight">
                 {offer.title}
               </p>
-              <p className="mt-3 text-2xl text-brand">{offer.price}</p>
-              <p className="mt-2 text-sm text-slate-blue">{offer.term}</p>
+              <p className="mt-3 text-2xl font-semibold text-foreground">
+                {offer.price}
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">{offer.term}</p>
               <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
                 Entregável: {offer.deliverableNoun}
               </p>
               <Button
                 nativeButton={false}
+                variant="appointment"
                 render={<Link href="/contato" />}
-                className="mt-8 h-11 w-fit px-5 text-sm"
+                className="mt-8 h-11 w-fit px-5 text-sm font-medium"
               >
                 Agendar conversa de 45 minutos
               </Button>

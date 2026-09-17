@@ -63,7 +63,7 @@ export default function CredencialPage() {
           <div className="grid gap-10 md:grid-cols-2">
             {facts.map((fact) => (
               <article key={fact.title} className="border-t border-border pt-5">
-                <h2 className="font-heading text-2xl font-normal">{fact.title}</h2>
+                <h2 className="font-heading text-2xl font-semibold tracking-tight">{fact.title}</h2>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
                   {fact.text}
                 </p>
@@ -77,7 +77,7 @@ export default function CredencialPage() {
 
       <section className="py-16 sm:py-20">
         <Container className="max-w-3xl">
-          <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
+          <p className="text-[12px] font-semibold tracking-[0.08em] text-brand-red uppercase">
             Vertical e geografia
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
@@ -104,7 +104,7 @@ export default function CredencialPage() {
                   rel="noopener noreferrer"
                 />
               }
-              className="h-11 rounded-full px-5 text-sm"
+              className="h-11 px-5 text-sm"
             >
               LinkedIn
             </Button>
