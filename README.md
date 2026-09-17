@@ -23,6 +23,19 @@ npm run start    # servir out/ na porta 4317
 npm run lint
 ```
 
+## Área logada (`/admin`)
+
+Edite textos, fotos e fontes sem mexer no código:
+
+1. Abra [http://localhost:4317/admin](http://localhost:4317/admin) (ou `/admin` no domínio).
+2. Entre com a senha inicial `ouvert2026` (troque o hash em `content/admin.json` depois).
+3. Para **publicar** no ar, informe um Personal Access Token do GitHub com permissão `repo` no repositório [otavioai/Ouvert](https://github.com/otavioai/Ouvert).
+4. Ajuste as abas **Textos**, **Fotos**, **Fontes** ou **Contato** e clique em **Publicar no GitHub**.
+
+O publish grava `content/site.json` (e uploads em `public/photos/`) via GitHub Contents API. O Actions reconstrói o site estático em alguns minutos.
+
+Conteúdo editável vive em `content/site.json`. O site lê esse arquivo em build (`lib/site.ts`).
+
 ## GitHub Pages + domínio
 
 Produção: [https://www.ouvertestrategias.com.br/](https://www.ouvertestrategias.com.br/). O site é estático (`output: "export"`), sem `basePath`.

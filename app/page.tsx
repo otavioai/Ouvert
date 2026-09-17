@@ -6,7 +6,7 @@ import { Diagnostic } from "@/components/diagnostic";
 import { HomeHero } from "@/components/home-hero";
 import { InsightsTeaser } from "@/components/insights-teaser";
 import { OfferCard } from "@/components/offer-card";
-import { offers, whyNow } from "@/lib/site";
+import { homeCopy, offers, whyNow } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -20,16 +20,16 @@ export default function HomePage() {
       >
         <Container>
           <p className="text-[11px] font-medium tracking-[0.22em] text-brand-red uppercase">
-            Dois pontos
+            {homeCopy.diagnosticEyebrow}
           </p>
           <h2
             id="diagnostico-heading"
             className="font-heading mt-3 max-w-2xl text-3xl font-normal sm:text-4xl"
           >
-            Qual o gatilho. Qual a porta.
+            {homeCopy.diagnosticTitle}
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            A mensagem de abertura é a mesma. A sua resposta indica a porta.
+            {homeCopy.diagnosticLead}
           </p>
           <Diagnostic />
         </Container>
@@ -39,16 +39,16 @@ export default function HomePage() {
         <Container>
           <div className="max-w-2xl">
             <p className="text-[11px] font-medium tracking-[0.22em] text-brand uppercase">
-              Três portas
+              {homeCopy.offersEyebrow}
             </p>
             <h2
               id="portas-heading"
               className="font-heading mt-3 text-3xl font-normal sm:text-4xl"
             >
-              A porta que faz sentido para o seu momento.
+              {homeCopy.offersTitle}
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Preço, prazo e entregável em evidência — sem “sob consulta”.
+              {homeCopy.offersLead}
             </p>
           </div>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -70,7 +70,7 @@ export default function HomePage() {
             id="agora-heading"
             className="font-heading mt-3 max-w-2xl text-3xl font-normal sm:text-4xl"
           >
-            Quando o número precisa fechar com clareza.
+            {homeCopy.whyNowTitle}
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
             {whyNow.map((item) => (

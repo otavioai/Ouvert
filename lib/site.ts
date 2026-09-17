@@ -1,26 +1,18 @@
-export const site = {
-  name: "OUVERT",
-  fullName: "OUVERT Estratégias Corporativas",
-  url: "https://www.ouvertestrategias.com.br",
-  person: "Luís Otávio Berti",
-  tagline:
-    "Deixo os números da sua empresa em condição de serem examinados por um terceiro: banco, comprador, investidor ou auditor.",
-  base: "Bento Gonçalves / Serra Gaúcha",
-  contact: {
-    telefone: "11 97236 3032",
-    telefoneHref: "tel:+5511972363032",
-    whatsapp: "11 97236 3032",
-    whatsappHref: "https://wa.me/5511972363032",
-  },
-  social: {
-    linkedin: "https://www.linkedin.com/in/luisotavioberti",
-    linkedinLabel: "linkedin.com/in/luisotavioberti",
-    linkedinCompany:
-      "https://www.linkedin.com/company/ouvert-estrategias-corporativas",
-    instagram: "https://www.instagram.com/ouvert.consult/",
-    instagramLabel: "instagram.com/ouvert.consult",
-  },
-} as const;
+import raw from "@/content/site.json";
+
+export type SiteContent = typeof raw;
+
+export const content = raw as SiteContent;
+
+export const site = content.site;
+export const headerCta = content.headerCta;
+export const photos = content.photos;
+export const heroFeatures = content.heroFeatures;
+export const offers = content.offers;
+export const whyNow = content.whyNow;
+export const clients = content.clients;
+export const homeCopy = content.home;
+export const fonts = content.fonts;
 
 export const navItems = [
   { href: "/", label: "Home" },
@@ -29,82 +21,6 @@ export const navItems = [
   { href: "/casos", label: "Estudos de caso" },
   { href: "/insights", label: "Insights" },
   { href: "/contato", label: "Contato" },
-] as const;
-
-export const headerCta = {
-  href: "/contato",
-  label: "Agendar conversa",
-} as const;
-
-export const photos = {
-  hero: "/photos/hero-cave.jpg",
-  bottles: "/photos/hero-bottles.jpg",
-  vineyard: "/photos/vineyard.jpg",
-  wine: "/photos/wine-glass.jpg",
-  ledger: "/photos/ledger.jpg",
-  portrait: "/portraits/otavio-seated.jpg",
-  portraitClose: "/portraits/otavio-close.jpg",
-} as const;
-
-export const heroFeatures = [
-  {
-    title: "Due diligence",
-    text: "17 exames consecutivos, ao lado de quem analisa.",
-  },
-  {
-    title: "Controles",
-    text: "R$ 1,5 bi de exposição trabalhista estruturada (Safra).",
-  },
-  {
-    title: "Governança",
-    text: "Finanças e risco construídos do zero em cinco unidades.",
-  },
-  {
-    title: "A&B / Serra",
-    text: "Histórico real em alimentos, bebidas e vinícolas.",
-  },
-] as const;
-
-export const offers = [
-  {
-    id: "sala-de-exame",
-    eyebrow: "Porta principal",
-    title: "Sala de exame",
-    forWho:
-      "Para quem vai a M&A, entrada de sócio ou investidor, sucessão ou primeira auditoria.",
-    price: "R$ 35.000 a 60.000",
-    term: "4 a 8 semanas",
-    deliverableNoun: "Sala de exame organizada",
-    deliverable:
-      "Sala de exame organizada — levantamento dos pontos sensíveis, reconstrução auditável, data room e ensaio das perguntas do comprador.",
-    featured: true,
-  },
-  {
-    id: "orcamento-2027",
-    eyebrow: "Janela setembro–novembro",
-    title: "Orçamento 2027",
-    subtitle: "Diagnóstico Financeiro Express",
-    forWho: "Para quem fecha orçamento entre setembro e novembro.",
-    price: "R$ 12.000 a 18.000",
-    term: "15 dias",
-    note: "Raio-X para vinícolas: R$ 4.500 a 6.000",
-    deliverableNoun: "Orçamento aprovável",
-    deliverable:
-      "Orçamento aprovável — receita por linha, custos por driver, caixa mês a mês, três cenários, painel e apresentação aos sócios.",
-    featured: false,
-  },
-  {
-    id: "dossie-banco",
-    eyebrow: "Crédito e covenant",
-    title: "Dossiê para o banco",
-    forWho: "Para quem renova limite, busca capital de giro ou responde a covenant.",
-    price: "R$ 12.000 a 18.000",
-    term: "15 dias",
-    deliverableNoun: "Dossiê de crédito",
-    deliverable:
-      "Dossiê de crédito — projeções em formato de comitê, análise de endividamento e roteiro de negociação.",
-    featured: false,
-  },
 ] as const;
 
 export const stats = [
@@ -178,21 +94,6 @@ export const industries = [
   "Crédito e covenant",
 ] as const;
 
-export const clients = [
-  {
-    name: "Vallontano",
-    sector: "Vinhos nobres · Vale dos Vinhedos",
-    url: "https://vallontano.com.br/",
-    note: "Vinícola em Bento Gonçalves. Atendi no vertical de alimentos e bebidas.",
-  },
-  {
-    name: "Panamby Capital",
-    sector: "Gestão de recursos",
-    url: "https://www.panambycapital.com.br/",
-    note: "Transformação regulatória: montei o instrumento de controle onde ainda não havia estrutura para quem ia conferir.",
-  },
-] as const;
-
 export const triggers = [
   {
     id: "exame",
@@ -208,24 +109,5 @@ export const triggers = [
     id: "banco",
     label: "Banco, limite, capital de giro ou covenant",
     offerId: "dossie-banco",
-  },
-] as const;
-
-export const whyNow = [
-  {
-    title: "Comprador à vista",
-    text: "M&A, sócio ou investidor pedem detalhe além da aproximação. A sala de exame deixa o processo mais seguro para os dois lados.",
-  },
-  {
-    title: "Janela de 2027",
-    text: "Quem fecha orçamento entre setembro e novembro precisa de receita por linha, custo por driver e caixa mês a mês — aprovável pelos sócios.",
-  },
-  {
-    title: "Banco na mesa",
-    text: "Renovação de limite, capital de giro ou covenant: o comitê pergunta no formato dele. Eu deixo o dossiê nesse formato.",
-  },
-  {
-    title: "Primeira auditoria",
-    text: "Sucessão ou primeira conferência externa. O padrão é o mesmo: o que precisa de ajuste, o que fica auditável, o ensaio das perguntas.",
   },
 ] as const;

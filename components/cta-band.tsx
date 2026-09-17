@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { photos } from "@/lib/site";
+import { homeCopy, photos } from "@/lib/site";
 
 export function CtaBand() {
   return (
@@ -21,11 +21,10 @@ export function CtaBand() {
           Próximo passo
         </p>
         <h2 className="font-heading mt-4 text-3xl font-normal sm:text-5xl">
-          Conversa de 45 minutos, sem custo.
+          {homeCopy.ctaTitle}
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-white/75">
-          Me diga se o assunto é comprador, orçamento de 2027 ou banco. Eu
-          indico a porta.
+          {homeCopy.ctaLead}
         </p>
         <Button
           nativeButton={false}

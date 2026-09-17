@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
-import { Fraunces, Geist, Geist_Mono } from "next/font/google";
+import type { CSSProperties, ReactNode } from "react";
+import { Geist, Geist_Mono } from "next/font/google";
 
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import { site } from "@/lib/site";
+import { SiteShell } from "@/components/site-shell";
+import { googleFontsHref } from "@/lib/fonts";
+import { fonts, site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,12 +17,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-display",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(`${site.url}/`),
   title: {
@@ -30,14 +24,42 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.tagline,
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+const fontsLink = googleFontsHref(fonts.display, fonts.sans);
+const useGeistSans = fonts.sans === "Geist";
+
+const htmlStyle = {
+  "--font-display": `"${fonts.display}", Georgia, serif`,
+  ...(useGeistSans
+    ? {}
+    : { "--font-sans": `"${fonts.sans}", system-ui, sans-serif` }),
+} as CSSProperties;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${useGeistSans ? geistSans.variable : ""} ${geistMono.variable} h-full antialiased`}
+      style={htmlStyle}
     >
+      <head>
+        {fontsLink ? (
+          <>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossOrigin="anonymous"
+            />
+            <link href={fontsLink} rel="stylesheet" />
+          </>
+        ) : null}
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <a
           href="#conteudo"
@@ -45,11 +67,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Ir para o conteúdo
         </a>
-        <SiteHeader />
-        <main id="conteudo" className="flex flex-1 flex-col">
-          {children}
-        </main>
-        <SiteFooter />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import { Calculator, FolderSearch, Grape, Landmark } from "lucide-react";
 
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { heroFeatures, photos, site } from "@/lib/site";
+import { heroFeatures, homeCopy, photos, site } from "@/lib/site";
 
 const featureIcons = [FolderSearch, Calculator, Landmark, Grape] as const;
 
@@ -38,13 +38,10 @@ export function HomeHero() {
           {site.person} · {site.fullName}
         </p>
         <h1 className="rise rise-delay-1 font-heading mt-5 max-w-3xl text-[2.15rem] leading-[1.12] font-normal tracking-tight sm:text-5xl lg:text-[3.4rem]">
-          Deixo os números da sua empresa em condição de serem examinados por um
-          terceiro: banco, comprador, investidor ou auditor.
+          {homeCopy.heroTitle}
         </h1>
         <p className="rise rise-delay-2 mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-          Já participei desse exame dezessete vezes, do outro lado da mesa — e
-          construí do zero finanças, risco e governança em empresas que
-          precisavam estar prontas para quem analisa.
+          {homeCopy.heroLead}
         </p>
         <div className="rise rise-delay-3 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button

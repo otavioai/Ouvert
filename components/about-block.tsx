@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { photos, site } from "@/lib/site";
+import { homeCopy, photos, site } from "@/lib/site";
 
 export function AboutBlock() {
   return (
@@ -18,13 +18,11 @@ export function AboutBlock() {
               id="sobre-heading"
               className="font-heading mt-3 text-3xl leading-tight font-normal sm:text-5xl"
             >
-              Experiência do outro lado da mesa,{" "}
-              <span className="text-brand">dezessete vezes.</span>
+              {homeCopy.aboutTitle}{" "}
+              <span className="text-brand">{homeCopy.aboutTitleAccent}</span>
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-muted-foreground">
-              Não apresento só currículo. Mostro o que já preparei do lado de
-              quem analisa — e o que deixo pronto do seu lado. Base na Serra
-              Gaúcha, vertical em alimentos e bebidas.
+              {homeCopy.aboutText}
             </p>
             <div className="mt-8 flex items-center gap-4">
               <Image
