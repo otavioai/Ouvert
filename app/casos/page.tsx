@@ -34,7 +34,7 @@ export default function CasosPage() {
       <PageBanner
         eyebrow="Estudos de caso"
         title="O que reprovava. O que foi feito. O que ficou examinável."
-        image={photos.vineyard}
+        image={photos.bottles}
       >
         Casos em alimentos e bebidas — com ênfase em vinícolas da Serra Gaúcha.
         Cada um segue a mesma estrutura: situação → o que reprovava → o que foi

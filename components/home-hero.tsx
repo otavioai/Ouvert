@@ -13,19 +13,24 @@ export function HomeHero() {
     <section className="relative overflow-hidden bg-ink text-white">
       <Image
         src={photos.hero}
-        alt="Mesa de trabalho com números e decisão em grupo"
+        alt="Cave de barris — vertical de vinhos e Serra Gaúcha"
         fill
         priority
         className="hero-kenburns object-cover object-center"
         sizes="100vw"
       />
+      {/* Matiz marca: ink + azul-aço + leve vermelho OUVERT */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgb(11_21_32_/_0.88)_0%,rgb(11_21_32_/_0.62)_48%,rgb(11_21_32_/_0.35)_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(105deg,rgb(11_21_32_/_0.92)_0%,rgb(11_21_32_/_0.72)_42%,rgb(58_122_146_/_0.45)_72%,rgb(128_24_24_/_0.28)_100%)]"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[linear-gradient(to_top,rgb(11_21_32_/_0.72)_0%,transparent_42%)]"
+        className="absolute inset-0 bg-[linear-gradient(to_top,rgb(11_21_32_/_0.82)_0%,transparent_48%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 mix-blend-soft-light bg-[radial-gradient(ellipse_70%_60%_at_70%_40%,rgb(58_122_146_/_0.35),transparent_65%)]"
       />
 
       <Container className="relative pt-28 pb-28 sm:pt-36 sm:pb-36 lg:pt-40 lg:pb-40">

@@ -33,7 +33,8 @@ export const headerCta = {
 } as const;
 
 export const photos = {
-  hero: "/photos/hero-meeting.jpg",
+  hero: "/photos/hero-cave.jpg",
+  bottles: "/photos/hero-bottles.jpg",
   vineyard: "/photos/vineyard.jpg",
   wine: "/photos/wine-glass.jpg",
   ledger: "/photos/ledger.jpg",

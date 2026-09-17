@@ -8,7 +8,7 @@ export function PageBanner({
   eyebrow,
   title,
   children,
-  image = photos.vineyard,
+  image = photos.bottles,
 }: {
   eyebrow: string;
   title: string;
@@ -22,12 +22,16 @@ export function PageBanner({
         alt=""
         fill
         priority
-        className="object-cover object-center opacity-50"
+        className="object-cover object-center"
         sizes="100vw"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgb(11_21_32_/_0.88),rgb(11_21_32_/_0.55))]"
+        className="absolute inset-0 bg-[linear-gradient(105deg,rgb(11_21_32_/_0.9)_0%,rgb(11_21_32_/_0.7)_50%,rgb(58_122_146_/_0.4)_100%)]"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[linear-gradient(to_top,rgb(11_21_32_/_0.55),transparent_55%)]"
       />
       <Container className="relative pt-28 pb-16 sm:pt-32 sm:pb-20">
         <p className="text-[11px] font-medium tracking-[0.22em] text-white/70 uppercase">
