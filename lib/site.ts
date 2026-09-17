@@ -6,15 +6,19 @@ export const site = {
   tagline:
     "Deixo os números da sua empresa em condição de serem examinados por um terceiro: banco, comprador, investidor ou auditor.",
   base: "Bento Gonçalves / Serra Gaúcha",
-  placeholders: {
-    whatsapp: "[WHATSAPP]",
-    telefone: "[TELEFONE]",
+  contact: {
+    telefone: "11 97236 3032",
+    telefoneHref: "tel:+5511972363032",
+    whatsapp: "11 97236 3032",
+    whatsappHref: "https://wa.me/5511972363032",
   },
   social: {
     linkedin: "https://www.linkedin.com/in/luisotavioberti",
+    linkedinLabel: "linkedin.com/in/luisotavioberti",
     linkedinCompany:
       "https://www.linkedin.com/company/ouvert-estrategias-corporativas",
-    instagram: "https://www.instagram.com/otavioberti/",
+    instagram: "https://www.instagram.com/ouvert.consult/",
+    instagramLabel: "instagram.com/ouvert.consult",
   },
 } as const;
 

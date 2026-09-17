@@ -36,15 +36,23 @@ export default function ContatoPage() {
             <div className="space-y-3 border border-border bg-card px-5 py-6 text-sm">
               <p>
                 Telefone:{" "}
-                <span className="font-mono text-brand">
-                  {site.placeholders.telefone}
-                </span>
+                <a
+                  href={site.contact.telefoneHref}
+                  className="font-mono text-brand hover:underline"
+                >
+                  {site.contact.telefone}
+                </a>
               </p>
               <p>
                 WhatsApp:{" "}
-                <span className="font-mono text-brand">
-                  {site.placeholders.whatsapp}
-                </span>
+                <a
+                  href={site.contact.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-brand hover:underline"
+                >
+                  {site.contact.whatsapp}
+                </a>
               </p>
               <p>
                 LinkedIn:{" "}
@@ -54,7 +62,7 @@ export default function ContatoPage() {
                   rel="noopener noreferrer"
                   className="text-brand hover:underline"
                 >
-                  linkedin.com/in/luisotavioberti
+                  {site.social.linkedinLabel}
                 </a>
               </p>
               <p>
@@ -65,20 +73,30 @@ export default function ContatoPage() {
                   rel="noopener noreferrer"
                   className="text-brand hover:underline"
                 >
-                  instagram.com/otavioberti
+                  {site.social.instagramLabel}
                 </a>
               </p>
               <p className="text-muted-foreground">Base: {site.base}</p>
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              WhatsApp ainda não foi informado — o marcador entra no lugar até
-              lá.
-            </p>
+            <Button
+              nativeButton={false}
+              render={
+                <a
+                  href={site.contact.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
+              variant="appointment"
+              className="mt-8 h-11 rounded-full px-5 text-sm"
+            >
+              Chamar no WhatsApp
+            </Button>
             <Button
               nativeButton={false}
               render={<Link href="/" />}
               variant="outline"
-              className="mt-8 h-11 rounded-full px-5 text-sm"
+              className="mt-3 h-11 rounded-full px-5 text-sm sm:ml-3"
             >
               Voltar para Home
             </Button>

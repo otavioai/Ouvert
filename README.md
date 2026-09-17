@@ -47,13 +47,14 @@ Os registros A no apex (`ouvertestrategias.com.br`) mandam o domínio nu para o 
 
 `public/.nojekyll` evita que o Jekyll do Pages ignore a pasta `_next`.
 
-## Conteúdo e placeholders
+## Contato
+
+- Telefone / WhatsApp: [11 97236 3032](https://wa.me/5511972363032)
+- LinkedIn: [linkedin.com/in/luisotavioberti](https://www.linkedin.com/in/luisotavioberti)
+- Instagram: [instagram.com/ouvert.consult](https://www.instagram.com/ouvert.consult/)
+- Base: Bento Gonçalves / Serra Gaúcha
 
 Copy da Home vem dos arquivos de briefing (`eu` em primeira pessoa; preços e entregáveis visíveis).
-
-Ainda **não** há WhatsApp comercial. No rodapé e em Contato o campo aparece como `[WHATSAPP]` e `[TELEFONE]`.
-
-LinkedIn: [linkedin.com/in/luisotavioberti](https://www.linkedin.com/in/luisotavioberti). Instagram: [instagram.com/otavioberti](https://www.instagram.com/otavioberti/). Insights aponta para postagens públicas do LinkedIn e para o perfil no Instagram.
 
 ## Stack
 

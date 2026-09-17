@@ -42,9 +42,14 @@ export function SiteFooter() {
           </a>
           <p className="text-white/55">
             WhatsApp:{" "}
-            <span className="font-mono text-white/80">
-              {site.placeholders.whatsapp}
-            </span>
+            <a
+              href={site.contact.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-white/80 hover:text-white"
+            >
+              {site.contact.whatsapp}
+            </a>
           </p>
           <Link href="/contato" className="text-white hover:underline">
             Contato
