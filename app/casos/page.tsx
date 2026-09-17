@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 const reservedCases = [
   {
-    title: "Grupo de vinícolas preparando M&A",
-    note: "Caso âncora — fatos reais ainda em validação. Não publico números nem resultado até isso estar fechado.",
+    title: "Preparação de uma grande vinícola européia para M&A",
+    note: "Caso âncora — Grande vinícola com questões sucessórias. Não publico números nem resultado até isso estar fechado.",
   },
   {
     title: "Alimentos e bebidas · Serra Gaúcha",
