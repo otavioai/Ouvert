@@ -1,7 +1,7 @@
 {
   "fonts": {
-    "display": "IBM Plex Sans",
-    "sans": "IBM Plex Sans"
+    "display": "Geist",
+    "sans": "Source Sans 3"
   },
   "site": {
     "name": "OUVERT",
@@ -38,8 +38,8 @@
     "portraitClose": "/portraits/otavio-close.jpg"
   },
   "home": {
-    "heroTitle": "Deixo os números da sua empresa em condição de serem examinados por um terceiro: banco, comprador, investidor ou auditor.",
-    "heroLead": "Já participei desse exame dezessete vezes, do outro lado da mesa — e construí do zero finanças, risco e governança em empresas que precisavam estar prontas para quem analisa.",
+    "heroTitle": "Deixo os números da sua empresa em condição de serem examinados por terceiros: bancos, compradores, investidores ou auditores.",
+    "heroLead": "Já participei nesse exame dezessete vezes, do outro lado da mesa — e construí do zero finanças, risco e governança em empresas que precisavam estar prontas para quem analisa.",
     "aboutTitle": "Experiência do outro lado da mesa,",
     "aboutTitleAccent": "dezessete vezes.",
     "aboutText": "Não apresento só currículo. Mostro o que já preparei do lado de quem analisa — e o que deixo pronto do seu lado. Base na Serra Gaúcha, vertical em alimentos e bebidas.",
@@ -76,7 +76,7 @@
       "id": "sala-de-exame",
       "eyebrow": "Porta principal",
       "title": "Sala de exame",
-      "forWho": "Para quem vai a M&A, entrada de sócio ou investidor, sucessão ou primeira auditoria.",
+      "forWho": "Para quem vai a Fusão ou Aquisição, entrada de sócio ou investidor, sucessão ou primeira auditoria.",
       "price": "R$ 35.000 a 60.000",
       "term": "4 a 8 semanas",
       "deliverableNoun": "Sala de exame organizada",
@@ -100,7 +100,7 @@
       "id": "dossie-banco",
       "eyebrow": "Crédito e covenant",
       "title": "Dossiê para o banco",
-      "forWho": "Para quem renova limite, busca capital de giro ou responde a covenant.",
+      "forWho": "Para quem precisa alavancar o negócio, renovar limite, buscar capital de giro ou responder a covenant.",
       "price": "R$ 12.000 a 18.000",
       "term": "15 dias",
       "deliverableNoun": "Dossiê de crédito",
